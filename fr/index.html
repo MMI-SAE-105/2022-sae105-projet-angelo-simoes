@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{menuIsOpen:false}": class="{noscroll:menuIsOpen,}">
+<html lang="fr" x-data="{menuIsOpen:false}": class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,17 +31,18 @@
 </head>
 <body>
     <header>
-        
+        <h1>Memories</h1>
+
         <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class = "header_menu"><img src="./public/icon/tinify-2022-11-16T10_17_52/Menu .webp" alt="#"></button>
         <h1>menu</h1>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
-                <li><a href="/fr/musique.html">Une musique interessante</a></li>
-                <li><a href="/fr/livre.html">Le livre pour l’environnement</a></li>
-                <li><a href="/fr/film.html">La Série qui résume tout</a></li>
-                <li><a href="/fr/lieu.html">le lieu le plus inégalitaire du monde</a></li>
-                <li><a href="/fr/espoir.html">Un grand Espoirs de ce monde</a></li>
-                <li><a href="/fr/crainte.html">Un Regret de cette génération</a></li>
+                <li><a href="/fr/musique.html">Le Voyage de Chihiro, la société dépeinte selon Miyazaki</a></li>
+                <li><a href="/fr/livre.html">One Piece,  icône de la popculture</a></li>
+                <li><a href="/fr/film.html">Chang, quand PNL nous ressasse leur passé </a></li>
+                <li><a href="/fr/lieu.html">Portugal, voyage à travers 800 ans d’histoire</a></li>
+                <li><a href="/fr/espoir.html">Une lueur d’espoir pour l’avenir de la Terre</a></li>
+                <li><a href="/fr/crainte.html">Quel avenir pour notre planète ?</a></li>
                 <li><a href="/fr/autres_projets.html">Autres Projets</a></li>
             </ul>
             <ul>
@@ -51,28 +52,5 @@
             </ul>
         </nav>         
     </header>
-
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">menu</button>
-    <h1>Test de menu</h1>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-      <ul>
-        <li><a href="#">item 1</a></li>
-        <li><a href="#">item 2</a></li>
-        <li><a href="#">item 3</a></li>
-      </ul>
-    </nav>
-  
-    <dl>
-      <dt aria-controls="dd1" @click="dd1Open = ! dd1Open">Lorem.</dt>
-      <dd id="dd1" x-show="dd1Open" x-transition.duration.400ms>Lorem ipsum dolor sit amet.</dd>
-    </dl>
-    <dl>
-      <dt aria-controls="dd2" @click="dd2Open = ! dd2Open">Nesciunt.</dt>
-      <dd id="dd2" x-show="dd2Open" x-transition.duration.400ms>Distinctio id natus architecto esse.</dd>
-    </dl>
-    <dl>
-      <dt aria-controls="dd3" @click="dd3Open = ! dd3Open">Ea.</dt>
-      <dd id="dd3" x-show="dd3Open" x-transition.duration.400ms>Cum sint aliquid recusandae mollitia.</dd>
-    </dl>
 </body>
 </html>
