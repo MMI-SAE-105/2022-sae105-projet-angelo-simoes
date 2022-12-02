@@ -30,10 +30,10 @@
     </style>
 </head>
 <body>
+    
     <header>
         <h1>Memories</h1>
-
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class = "header_menu"><img src="./public/icon/tinify-2022-11-16T10_17_52/Menu .webp" alt="#"></button>
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class = "header_menu"><img src="/public/img/menu_open.svg" alt="#"></button>
         <h1>menu</h1>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
@@ -52,6 +52,7 @@
             </ul>
         </nav>         
     </header>
+
     <footer>
         <h2>memories</h2>
         <ul>
