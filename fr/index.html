@@ -30,11 +30,15 @@
     </style>
 </head>
 <body>   
-    <header>
+    <header class="header">
         <h1>Memories</h1>
         <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class = "header_menu"><img src="/public/img/menu_open.svg" alt="#"></button>
         <h1>menu</h1>
         
+        <button class="header__menu-btn menu-btn">
+            <span class="menu-btn__bar"></span>
+        </button>
+  
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
                 <li><a href="/fr/musique.html">Le Voyage de Chihiro, la société dépeinte selon Miyazaki</a></li>
