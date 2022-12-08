@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="/src/style.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
     <style>
@@ -30,41 +30,47 @@
     </style>
 </head>
 <body>   
+
     <header class="header">
-        <h1>Memories</h1>
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class = "header_menu"><img src="/public/img/menu_open.svg" alt="#"></button>
-        <h1>menu</h1>
-        
-        <button class="header__menu-btn menu-btn">
-            <span class="menu-btn__bar"></span>
-        </button>
-  
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="/fr/musique.html">Le Voyage de Chihiro, la société dépeinte selon Miyazaki</a></li>
-                <li><a href="/fr/livre.html">One Piece,  icône de la popculture</a></li>
-                <li><a href="/fr/film.html">Chang, quand PNL nous ressasse leur passé </a></li>
-                <li><a href="/fr/lieu.html">Portugal, voyage à travers 800 ans d’histoire</a></li>
-                <li><a href="/fr/espoir.html">Une lueur d’espoir pour l’avenir de la Terre</a></li>
-                <li><a href="/fr/crainte.html">Quel avenir pour notre planète ?</a></li>
-                <li><a href="/fr/autres_projets.html">Autres Projets</a></li>
-            </ul>
-            <ul>
-                <li><a href="/fr/glossaire.html">Glossaire</a></li>
-                <li><a href="/fr/à_propos.html">À propos</a></li>
-                <li><a href="/fr/contact.html">Contact</a></li>
-            </ul>
-        </nav>         
+
+        <div class="header__start">
+            <a class="header__lien_logo" href="/fr/index.html">
+                <h1 class="header__logo">Memories</h1>
+            </a>   
+        </div>
+
+        <div class="header__end">
+            <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu-btn menu-btn" >
+                <span class="menu-btn__bar"></span>
+            </button>
+      
+            <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
+                <ul>
+                    <li><a href="/fr/musique.html">Le Voyage de Chihiro, la société dépeinte selon Miyazaki</a></li>
+                    <li><a href="/fr/livre.html">One Piece,  icône de la popculture</a></li>
+                    <li><a href="/fr/film.html">Chang, quand PNL nous ressasse leur passé </a></li>
+                    <li><a href="/fr/lieu.html">Portugal, voyage à travers 800 ans d’histoire</a></li>
+                    <li><a href="/fr/espoir.html">Une lueur d’espoir pour l’avenir de la Terre</a></li>
+                    <li><a href="/fr/crainte.html">Quel avenir pour notre planète ?</a></li>
+                    <li><a href="/fr/autres_projets.html">Autres Projets</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/fr/glossaire.html">Glossaire</a></li>
+                    <li><a href="/fr/à_propos.html">À propos</a></li>
+                    <li><a href="/fr/contact.html">Contact</a></li>
+                </ul>
+            </nav>    
+        </div>
+            
     </header>
+
     <main>
         <div>
-            <p>Laissez vous guider à travers ce voyage vers l’enfance.</p>
-            
+            <p>Laissez vous guider à travers ce voyage vers l’enfance.</p>   
         </div>
 
         <section>
             <h2>les derniers articles</h2>
-
             <article>
                 <a href="film.html">
                     <img src="/public/img/Film/presentation_voyage_chihiro.webp" alt="Film : Le Voyage de Chihiro">
@@ -76,7 +82,7 @@
 
             <article>
                 <a href="musique.html">
-                    <img src="" alt="Musique : PNL - Chang">
+                    <img src="/public/img/Musique/PNL_tour_eiffel.webp" alt="Musique : PNL - Chang">
                 </a>
                 <h3>pnl - chang</h3>
                 <p>Partagé entre regret et bon moment, PNL nous transporte dans leur enfance tout ça sur un brin de mélancolie.</p>
@@ -85,7 +91,7 @@
 
             <article>
                 <a href="livre.html">
-                    <img src="" alt="Livre : One Piece">
+                    <img src="/public/img/Livre/ace_sabo_luffy.webp" alt="Livre : One Piece">
                 </a>
                 <h3>One Piece</h3>
                 <p>A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.</p>
@@ -94,7 +100,7 @@
 
             <article>
                 <a href="lieu.html">
-                    <img src="/public/img/Lieu/" alt="Lieu : Portugal">
+                    <img src="/public/img/Lieu/lisbonne.webp" alt="Lieu : Portugal">
                 </a>
                 <h3>Portugal</h3>
                 <p>Le Portugal petit pays mais terre rempli d’histoire, voyageons à travers plus de 800 ans d’existence composé de haut et de bas.</p>
@@ -103,7 +109,7 @@
 
             <article>
                 <a href="espoir.html">
-                    <img src="/public/img/Espoir/" alt="Espoir : Un espoir pour la Terre">
+                    <img src="/public/img/Espoir/fridays_for_future.webp" alt="Espoir : Un espoir pour la Terre">
                 </a>
                 <h3>Un espoir pour la Terre</h3>
                 <p>“Fridays For Future”, “Youth for Climate” vous avez déjà sûrement entendu leur nom mais qui sont-ils et pourquoi font-ils autant de bruit ?</p>

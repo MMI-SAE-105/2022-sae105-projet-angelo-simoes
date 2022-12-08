@@ -9,14 +9,15 @@
   .menu-btn {
     position: relative;
     z-index: 3;
-    width: 30px;  
+    width: 30px; 
+    background: var(--blue); 
   }
   
   .menu-btn__bar,
   .menu-btn__bar::before,
   .menu-btn__bar::after {
     content: '';
-    background: var(--gray-black);
+    background: var(--white--text);
     height: 2px;
     width: 100%;
     position: absolute;
@@ -31,3 +32,8 @@
   .menu-btn__bar::after {
     top: 10px;
   }
+
+
+  
+
+  

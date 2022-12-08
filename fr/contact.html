@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ open: false }">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,19 @@
     <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
 </head>
 <body>
+
+  <div  x-on:click.outside="open = false">
+    <button x-on:click="open = !open">
+      Menu
+      <span :class="{'rotated': open}">&raquo;</span>
+    </button>
+  </div>
+  <ul x-show="open" x-transition.opacity>
+    <li><a href="#">Edit Profile</a></li>
+    <li><a href="#">Settings</a></li>
+    <li><a href="#">Log Out</a></li>        
+  </ul>
+
     <main>
         <h2>Contact</h2>
         <section>
