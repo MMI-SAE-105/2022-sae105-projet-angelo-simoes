@@ -14,8 +14,23 @@
   }
   
   .footer__logo {
+    text-transform: uppercase;
     color: var(--white-text);
     font-family: var(--font-logo);
-    font-size: var(--project--name-24-px);
+    font-size: var(--project--name-28-px);
     text-align: center;
   }
+
+  .footer__menu {
+    text-transform : uppercase;
+    color: var(--white--text);
+    font-family: var(--font-sans-serif);
+    font-weight: 500;
+  }
+
+  .footer__description {
+    color: var(--grey--text);
+    font-family: var(--font-sans-serif);
+    font-weight: 300;
+  }
+

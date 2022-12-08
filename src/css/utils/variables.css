@@ -10,7 +10,7 @@
 
 /* Text-size styles */
 --project--name-32-px: 32px;
---project--name-24-px: 24px;
+--project--name-28-px: 28px;
 --heading-2: 16px;
 --heading-3: 12px;
 --body--artciles: 18px;
@@ -23,8 +23,9 @@
 
   /* Polices de caractère */
   --font-mono: 'Space Mono', monospace;
-  --font-sans-serif: 'Mulish', sans-serif;
+  --font-sans-serif: 'Poppins', sans-serif;
   --font-logo: 'Gochi Hand';
+
 
   /* Font variantes */
   --letter-spacing: 0.05em;
