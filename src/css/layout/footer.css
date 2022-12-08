@@ -1,0 +1,21 @@
+.footer {
+    background-color: var(--dark--blue--footer);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: var(--space2x) var(--space3x);
+    justify-content: space-between;
+  }
+
+.footer__lien_logo {
+    text-decoration: none;
+    color: var(--white--text);
+  }
+  
+  .footer__logo {
+    color: var(--white-text);
+    font-family: var(--font-logo);
+    font-size: var(--project--name-24-px);
+    text-align: center;
+  }

@@ -18,14 +18,6 @@ Flex sert à positionner les éléments de l'en-tête (header__start et header__
   gap: var(--space2x);
 }
 
-.header__search {
-  width: 40px;
-}
-
-.header__logo {
-  display: block;
-}
-
 .header__lien_logo {
   text-decoration: none;
   color: var(--white--text);
