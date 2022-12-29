@@ -85,3 +85,11 @@ uniquement accessible aux lecteurs vocaux (sr = screen reader) */
   white-space: nowrap;
   border: 0;
 }
+
+.capitalize {
+  text-transform : capitalize;
+}
+
+.uppercase {
+  text-transform : uppercase;
+}
