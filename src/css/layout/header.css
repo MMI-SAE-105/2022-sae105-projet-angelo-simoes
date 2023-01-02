@@ -3,7 +3,7 @@ Flex sert à positionner les éléments de l'en-tête (header__start et header__
 */
 .header {
   background-color: var(--blue);
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;

@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{ open: false }">
+<html lang="fr" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <meta name="description" content="Site du projet pédagogique 'Memories' réalisé par Angelo Simoes">
+    <title>Contact - Memories</title>
+<!-- Déclaration de la feuille de style -->
+    <link rel="stylesheet" href="/src/style.css">
+<!-- Chargement de la librairie Alpine JS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
 </head>
-<body>
 
-  <div  x-on:click.outside="open = false">
-    <button x-on:click="open = !open">
-      Menu
-      <span :class="{'rotated': open}">&raquo;</span>
-    </button>
-  </div>
-  <ul x-show="open" x-transition.opacity>
-    <li><a href="#">Edit Profile</a></li>
-    <li><a href="#">Settings</a></li>
-    <li><a href="#">Log Out</a></li>        
-  </ul>
+<body>   
+<!-- En-tête de la page -->
+    <header class="header container">
+        <div>
+            <a class="header__lien_logo" href="/fr/index.html">
+                <h1 class="header__logo">Memories</h1>
+            </a>   
+        </div>
+
+        <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+                    <span class="menu-btn__bar"></span>
+            </button>
+        <!-- Menu principal -->
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/film.html">Le Voyage de Chihiro, la société dépeinte selon Miyazaki</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/livre.html">One Piece,  icône de la popculture</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/musique.html">Chang, quand PNL nous ressasse leur passé</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/lieu.html">Portugal, voyage à travers 800 ans d’histoire</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/espoir.html">Une lueur d’espoir pour l’avenir de la Terre</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/crainte.html">Quel avenir pour notre planète ?</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/autres_projets.html">Autres Projets</a></li>
+                    <hr class="menu__separation-line">
+                    <li class="menu__item_secondary"><a class="menu__link" href="/fr/glossaire.html">Glossaire</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
+                    <li class="menu__item_secondary capitalize"><a class="menu__link" href="/fr/à_propos.html">à propos</a></li>
+                </ul>
+            </nav>
+        <!-- Fin du menu principal -->
+        </div>      
+    </header>
+<!-- Fin de l'en-tête de page -->
 
     <main>
-        <h2>Contact</h2>
+        <h1 class="article-title">Contact</h1>
         <section>
             <p>Si vous désirez plus d'informations n'hésiter pas à me contacter !</p>
           <form action="#">
@@ -40,27 +66,33 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5"></textarea>
             </div>
-            <button type="submit">Envoyer</button>
+            <button class="contact__form-button uppercase" type="submit">Envoyer</button>
           </form>
         </section>
     </main>
 <!-- Fin du contenu principal -->
 
 <!-- Pied de page -->  
-    <footer class="footer">
-      <h2>memories</h2>
-      <nav>
-        
-      </nav>
-      <ul>
-          <li><a href="/fr/glossaire.html"></a>glossaire</li>
-          <li><a href="/fr/contact.html"></a>contact</li>
-          <li><a href="/fr/à_propos.html"></a>à propos</li>
+<footer class="footer">
+  <a class="footer__lien_title" href="/fr/index.html">
+      <h1 class="footer__title">Memories</h1>
+  </a> 
+
+  <nav class="footer__menu">
+      <ul class="list-unstyled">
+          <li><a class="footer__menu-item" href="/fr/glossaire.html">glossaire</a></li>
+          <li><a class="footer__menu-item" href="/fr/contact.html">contact</a></li>
+          <li><a class="footer__menu-item" href="/fr/à_propos.html">à propos</a></li>
       </ul>
+  </nav>
+
+  <div class="footer__description">
       <p>Angelo SIMOES C2</p>
       <a class="footer__link" href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
       <p>Projet réalisé dans le cadre d'un exercice pédagogique au département <a class="footer__link" href="http://mmimontbeliard.com/">MMI de Montbéliard</a></p>
-      <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
-  </footer>
+  </div>
+  
+  <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
+</footer>
 </body>
 </html>

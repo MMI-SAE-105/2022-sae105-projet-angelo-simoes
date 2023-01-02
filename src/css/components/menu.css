@@ -13,7 +13,7 @@ On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le 
   background-color: var(--blue);
   font-size: var(--text-xl);
   letter-spacing: var(--letter-spacing);
-  transition: all .4s ease-in-out;
+  transition: all .2s ease-in-out;
 }
   
 /* On se sert de Javascript pour ajouter une classe sur le menu lorsqu'on clique sur le bouton de menu pour le faire apparaître */
@@ -23,7 +23,7 @@ On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le 
   background-color: var(--blue);
   width: 80%;
   margin-left: 20%;
-  margin-top: 83px;
+  margin-top: 81px;
 }
 
 /* Mise en forme des éléments du menu */

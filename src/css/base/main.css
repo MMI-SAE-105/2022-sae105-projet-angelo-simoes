@@ -93,3 +93,10 @@ uniquement accessible aux lecteurs vocaux (sr = screen reader) */
 .uppercase {
   text-transform : uppercase;
 }
+
+.article-title {
+  font-size: var(--heading-1);
+  font-family: var(--font-sans-serif);
+  font-weight: normal;
+  color: var(--dark--blue--text);
+}
