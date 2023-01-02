@@ -100,3 +100,7 @@ uniquement accessible aux lecteurs vocaux (sr = screen reader) */
   font-weight: normal;
   color: var(--dark--blue--text);
 }
+
+.main {
+  padding-top: 80px;
+}
