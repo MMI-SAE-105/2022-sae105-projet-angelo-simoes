@@ -58,12 +58,12 @@
         <section>
             <h2>les derniers articles</h2>
             <article>
-                <a href="film.html">
+                <a href="/fr/film.html">
                     <img src="/public/img/Film/presentation_voyage_chihiro.webp" alt="Film : Le Voyage de Chihiro">
                 </a>
                 <h3>le voyage de chihiro</h3>
                 <p>A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.</p>
-                <a href="film.html">lire la suite</a>
+                <a href="/fr/film.html">lire la suite</a>
             </article>
 
             <article>
@@ -135,7 +135,7 @@
      <img :src="card.picture" :alt="card.picture_desc">
    </div>
    <div class="card__caption">
-     <p class="card__title" x-text="card.date"></p>
+     <p class="card__title" x-text="card.title"></p>
      <p class="card__excerpt" x-text="card.excerpt"></p>
      <a class="card__link morelink" :href="card.link">Plus d'info</a>
    </div>

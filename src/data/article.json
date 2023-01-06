@@ -6,7 +6,7 @@
       "title": "Le Voyage de Chihiro, la société dépeinte selon Miyazaki",
       "excerpt": "A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.",
       "link": "/fr/film.html",
-      "picture": "public/img/Film/presentation_voyage_chihiro.webp",
+      "picture": "/public/img/Film/presentation_voyage_chihiro.webp",
       "picture_desc": "orchestre violons"
     },
     {
@@ -46,7 +46,7 @@
       "title": "Quel avenir pour notre planète ?",
       "excerpt": "Pendant combien de temps encore notre planète va pouvoir endurer notre mode de vie actuel.",
       "link": "/fr/crainte.html",
-      "picture": "assets/img/agenda-03.webp",
+      "picture": "/public/img/Crainte/presentation_desespoir.webp",
       "picture_desc": "Danse contemporaine"
     },
     {
