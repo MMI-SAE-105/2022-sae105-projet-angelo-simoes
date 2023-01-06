@@ -120,6 +120,29 @@
                 <a href="autres_projets.html">lire la suite</a>
             </article>
         </section>
+
+        
+<section class="section container"
+      x-data="{ 'cards' : async ()=> {
+        const resp = await fetch('/src/data/article.json');
+        return await resp.json();
+}}">
+
+<template x-for="card in cards" :key="card.id">
+
+ <article class="section__card card">
+   <div class="card__img ">
+     <img :src="card.picture" :alt="card.picture_desc">
+   </div>
+   <div class="card__caption">
+     <p class="card__date" x-text="card.date"></p>
+     <p class="card__excerpt" x-text="card.excerpt"></p>
+     <a class="card__link morelink" :href="card.link">Plus d'info</a>
+   </div>
+ </article>
+
+</template>
+
     </main>
 <!-- Fin du contenu principal -->
 

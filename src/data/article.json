@@ -1,0 +1,61 @@
+
+   
+[
+    {
+      "id": 1,
+      "title": "Le Voyage de Chihiro, la société dépeinte selon Miyazaki",
+      "excerpt": "A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.",
+      "link": "concert-ouverture.html",
+      "picture": "assets/img/agenda-01.webp",
+      "picture_desc": "orchestre violons"
+    },
+    {
+      "id": 2,
+      "title": "One Piece,  icône de la popculture",
+      "excerpt": "Mourad Merzouki relève le défi d’un corps à corps avec le vent et propulse sa danse sur la mer du Vendée Globe.",
+      "link": "concert-ouverture.html",
+      "picture": "assets/img/agenda-02.webp",
+      "picture_desc": "Spectacle théâtral"
+    },
+    {
+      "id": 3,
+      "title": "Chang, quand PNL nous ressasse leur passé",
+      "excerpt": "L’avarice d’Harpagon retentit sur toute sa maison : ses serviteurs n’ont que des vêtements sales ou abîmés, ses chevaux meurent de faim, et son fils même emprunte à un usurier qui se révèle être… son propre père !",
+      "link": "concert-ouverture.html",
+      "picture": "assets/img/agenda-03.webp",
+      "picture_desc": "Danse contemporaine"
+    },
+    {
+      "id": 4,
+      "title": "Portugal, voyage à travers 800 ans d’histoire",
+      "excerpt": "L’avarice d’Harpagon retentit sur toute sa maison : ses serviteurs n’ont que des vêtements sales ou abîmés, ses chevaux meurent de faim, et son fils même emprunte à un usurier qui se révèle être… son propre père !",
+      "link": "concert-ouverture.html",
+      "picture": "assets/img/agenda-03.webp",
+      "picture_desc": "Danse contemporaine"
+    },
+    {
+      "id": 5,
+      "title": "Une lueur d’espoir pour l’avenir de la Terre",
+      "excerpt": "L’avarice d’Harpagon retentit sur toute sa maison : ses serviteurs n’ont que des vêtements sales ou abîmés, ses chevaux meurent de faim, et son fils même emprunte à un usurier qui se révèle être… son propre père !",
+      "link": "concert-ouverture.html",
+      "picture": "assets/img/agenda-03.webp",
+      "picture_desc": "Danse contemporaine"
+    },
+    {
+      "id": 6,
+      "title": "Quel avenir pour notre planète ?",
+      "excerpt": "L’avarice d’Harpagon retentit sur toute sa maison : ses serviteurs n’ont que des vêtements sales ou abîmés, ses chevaux meurent de faim, et son fils même emprunte à un usurier qui se révèle être… son propre père !",
+      "link": "concert-ouverture.html",
+      "picture": "assets/img/agenda-03.webp",
+      "picture_desc": "Danse contemporaine"
+    },
+    {
+      "id": 7,
+      "title": "Autres Projets",
+      "excerpt": "L’avarice d’Harpagon retentit sur toute sa maison : ses serviteurs n’ont que des vêtements sales ou abîmés, ses chevaux meurent de faim, et son fils même emprunte à un usurier qui se révèle être… son propre père !",
+      "link": "concert-ouverture.html",
+      "picture": "assets/img/agenda-03.webp",
+      "picture_desc": "Danse contemporaine"
+    }
+  
+  ]
