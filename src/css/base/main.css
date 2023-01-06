@@ -21,6 +21,7 @@ body {
   font-size: var(--text-md);
   line-height: 1.6;
   background-color: var(--gray-white);
+  color: var(--dark--blue--text);
 }
 
 /* Les règles typographiques générales des titres */
@@ -63,6 +64,7 @@ button {
 .container {
   padding-left: var(--space3x);
   padding-right: var(--space3x);
+  padding-bottom: 5rem;
 }
 
 /* Bug IOS
@@ -103,4 +105,5 @@ uniquement accessible aux lecteurs vocaux (sr = screen reader) */
 
 .main {
   padding-top: 80px;
+  background-color: var(--light--blue--background);
 }

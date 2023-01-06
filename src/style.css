@@ -33,3 +33,4 @@ Soyez attentifs à l'ordre d'import :
 
 /* Pages */
 @import "/src/css/pages/contact.css";
+@import "/src/css/pages/glossaire.css";
