@@ -21,7 +21,7 @@
                 <h1 class="header__logo">Memories</h1>
             </a>   
         </div>
-
+    
         <div class="header__end">
             <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
                     @pointerdown="menuIsOpen = !menuIsOpen" 
@@ -51,97 +51,29 @@
 <!-- Fin de l'en-tête de page -->
 
 <!-- Contenu principal de la page -->
-    <main class="main container">
-        <div>
+    <main class="main">
+        <div class="home__header container">
             <p class="home__introduction">Laissez vous guider à travers ce voyage vers l’enfance.</p>   
+            <h2 class="home__last-articles">les derniers articles</h2>
         </div>
-        <section>
-            <h2>les derniers articles</h2>
-            <article>
-                <a href="/fr/film.html">
-                    <img src="/public/img/Film/presentation_voyage_chihiro.webp" alt="Film : Le Voyage de Chihiro">
-                </a>
-                <h3>le voyage de chihiro</h3>
-                <p>A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.</p>
-                <a href="/fr/film.html">lire la suite</a>
-            </article>
-
-            <article>
-                <a href="musique.html">
-                    <img src="/public/img/Musique/PNL_tour_eiffel.webp" alt="Musique : PNL - Chang">
-                </a>
-                <h3>pnl - chang</h3>
-                <p>Partagé entre regret et bon moment, PNL nous transporte dans leur enfance tout ça sur un brin de mélancolie.</p>
-                <a href="musique.html">lire la suite</a>
-            </article>
-
-            <article>
-                <a href="livre.html">
-                    <img src="/public/img/Livre/ace_sabo_luffy.webp" alt="Livre : One Piece">
-                </a>
-                <h3>One Piece</h3>
-                <p>A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.</p>
-                <a href="livre.html">lire la suite</a>
-            </article>
-
-            <article>
-                <a href="lieu.html">
-                    <img src="/public/img/Lieu/lisbonne.webp" alt="Lieu : Portugal">
-                </a>
-                <h3>Portugal</h3>
-                <p>Le Portugal petit pays mais terre rempli d’histoire, voyageons à travers plus de 800 ans d’existence composé de haut et de bas.</p>
-                <a href="lieu.html">lire la suite</a>
-            </article>
-
-            <article>
-                <a href="espoir.html">
-                    <img src="/public/img/Espoir/fridays_for_future.webp" alt="Espoir : Un espoir pour la Terre">
-                </a>
-                <h3>Un espoir pour la Terre</h3>
-                <p>“Fridays For Future”, “Youth for Climate” vous avez déjà sûrement entendu leur nom mais qui sont-ils et pourquoi font-ils autant de bruit ?</p>
-                <a href="espoir.html">lire la suite</a>
-            </article>
-
-            <article>
-                <a href="crainte.html">
-                    <img src="/public/img/Crainte/presentation_desespoir.webp" alt="Crainte : Quel avenir pour notre planète ?">
-                </a>
-                <h3>quel avenir pour notre planète ?</h3>
-                <p>A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.</p>
-                <a href="crainte.html">lire la suite</a>
-            </article>
-
-            <article>
-                <a href="autres-projets.html">
-                    <img src="/public/img/projets/presentation_mmi.webp" alt="autres projets">
-                </a>
-                <h3>autres projets</h3>
-                <p>retrouver dans cette sections tous les projets du groupe de tp c2 du département mmi de montbéliard.</p>
-                <a href="autres-projets.html">lire la suite</a>
-            </article>
-        </section>
-
         
-<section class="container"
+<section class="section"
       x-data="{ 'cards' : async ()=> {
         const resp = await fetch('/src/data/article.json');
         return await resp.json();
 }}">
-
-<template x-for="card in cards" :key="card.id">
-
- <article class="section__card card">
-   <div class="card__img ">
-     <img :src="card.picture" :alt="card.picture_desc">
-   </div>
-   <div class="card__caption">
-     <p class="card__title" x-text="card.title"></p>
-     <p class="card__excerpt" x-text="card.excerpt"></p>
-     <a class="card__link morelink" :href="card.link">Plus d'info</a>
-   </div>
- </article>
-
-</template>
+    <template x-for="card in cards" :key="card.id">
+        <article class="card">
+            <div class="card__img ">
+                <img :src="card.picture" :alt="card.picture_desc">
+            </div>
+            <div class="card__caption">
+                <p class="card__title" x-text="card.title"></p>
+                <p class="card__excerpt" x-text="card.excerpt"></p>
+                <a class="card__link morelink uppercase" :href="card.link">lire la suite</a>
+            </div>
+        </article>
+    </template>
 </section>
 
     </main>

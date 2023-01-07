@@ -20,7 +20,7 @@ body {
   font-family: var(--font-sans-serif);
   font-size: var(--text-md);
   line-height: 1.6;
-  background-color: var(--gray-white);
+  background-color: var(--light--blue--background);
   color: var(--dark--blue--text);
 }
 
@@ -64,7 +64,6 @@ button {
 .container {
   padding-left: var(--space3x);
   padding-right: var(--space3x);
-  padding-bottom: 5rem;
 }
 
 /* Bug IOS
@@ -105,5 +104,4 @@ uniquement accessible aux lecteurs vocaux (sr = screen reader) */
 
 .main {
   padding-top: 80px;
-  background-color: var(--light--blue--background);
 }

@@ -6,6 +6,7 @@
     z-index: 2;
     padding: var(--space2x) var(--space3x);
     justify-content: space-between;
+    margin-top: var(--space6x);
   }
 
 .footer__lien_title {

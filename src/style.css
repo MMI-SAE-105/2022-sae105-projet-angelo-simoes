@@ -27,6 +27,7 @@ Soyez attentifs à l'ordre d'import :
 /* Règles de composition */
 @import "/src/css/layout/footer.css";
 @import "/src/css/layout/header.css";
+@import "/src/css/layout/section.css";
 
 /* Composants */
 @import "/src/css/components/menu.css";

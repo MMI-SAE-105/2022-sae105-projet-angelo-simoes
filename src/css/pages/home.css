@@ -2,3 +2,7 @@
     font-size: var(--text);
     font-style: italic;
 }
+
+.home__header{
+    margin-bottom: -128px;
+}
