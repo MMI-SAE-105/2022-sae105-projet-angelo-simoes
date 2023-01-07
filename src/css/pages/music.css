@@ -4,3 +4,7 @@
  font-style: italic;
  font-size: var(--small--text);
 }
+
+.music__spotify{
+    margin-top: 25px;
+}
