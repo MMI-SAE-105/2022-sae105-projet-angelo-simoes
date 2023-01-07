@@ -6,7 +6,7 @@
       "title": "Trav-All",
       "name": "Enes Tavukcu",
       "link": "http://travall.enestavukcu.fr/",
-      "picture": "/public/img/Film/presentation_voyage_chihiro.webp",
+      "picture": "/public/img/projets/Projet_Enes.webp",
       "picture_desc": "La scène du train dans le Voyage de Chihiro"
     },
     {
@@ -32,6 +32,30 @@
         "link": "https://pastlife.kubilayyardimli.fr/",
         "picture": "/public/img/projets/kubilay_projet.webp",
         "picture_desc": "Mosquée Sainte-Sophie"
+      },
+      {
+        "id": 5,
+        "title": "What is was to be 18 ?",
+        "name": "Romane Miguel",
+        "link": "https://www.wiwtb18.romane-miguel.fr/",
+        "picture": "/public/img/projets/romane-projet.webp",
+        "picture_desc": "Cinque terres en Italie"
+      },
+      {
+        "id": 6,
+        "title": "Denonciation of the current world",
+        "name": "Sofiane Mouadeb",
+        "link": "https://denunciationofthecurrentworld.mouadeb.fr/",
+        "picture": "/public/img/projets/sofiane-projet.webp",
+        "picture_desc": "Bidonville en Afrique du sud"
+      },
+      {
+        "id": 7,
+        "title": "Advanced Technology",
+        "name": "Maxime Ruchet",
+        "link": "  https://advancing-technologie.maximeruchet.fr/fr/",
+        "picture": "/public/img/projets/maxime-projet.webp",
+        "picture_desc": "La ville de Vancouver au Canada"
       }
   
   ]
