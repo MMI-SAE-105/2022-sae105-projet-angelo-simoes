@@ -9,7 +9,7 @@
     right: 0;
     height:250px;
     z-index: -1;
-    width: 375px;
+    width: 100%;
   }
 
   .card__caption {
