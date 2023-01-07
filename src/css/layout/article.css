@@ -3,6 +3,12 @@
     font-size: var(--small--text);
     font-weight: 300;
   }
+
+  .article__introduction-name{
+    font-family: var(--font-sans-serif);
+    font-size: var(--small--text);
+    font-weight: 400;
+  }
   
   .article__subheadings{
     font-family: var(--font-sans-serif);
