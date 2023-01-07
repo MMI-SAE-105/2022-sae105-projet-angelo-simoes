@@ -1,0 +1,6 @@
+.music__lyrics{
+ font-family: var(--font-sans-serif);
+ font-weight: 300;
+ font-style: italic;
+ font-size: var(--small--text);
+}
