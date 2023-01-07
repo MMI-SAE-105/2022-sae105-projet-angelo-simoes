@@ -7,6 +7,7 @@
 --grey--text: rgba(195, 195, 192, 1);
 --light--blue--card: rgba(239, 244, 255, 1);
 --light--blue--background: rgba(243, 248, 254, 1);
+--grey--image--caption:rgba(119,119,119,1);
 
 /* Text-size styles */
 --project--name-32-px: 32px;
@@ -25,6 +26,7 @@
   --font-mono: 'Space Mono', monospace;
   --font-sans-serif: 'Poppins', sans-serif;
   --font-logo: 'Gochi Hand';
+  --font-serif: 'EB Garamond', 'serif';
 
 
   /* Font variantes */
