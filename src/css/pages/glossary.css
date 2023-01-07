@@ -5,6 +5,5 @@
 }
 
 .glossaire__link-unstyled{
-    text-decoration: none;
     color: var(--dark--blue--text);
   }

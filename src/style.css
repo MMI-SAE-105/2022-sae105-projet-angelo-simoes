@@ -35,5 +35,6 @@ Soyez attentifs à l'ordre d'import :
 
 /* Pages */
 @import "/src/css/pages/contact.css";
-@import "/src/css/pages/glossaire.css";
+@import "/src/css/pages/glossary.css";
 @import "/src/css/pages/home.css";
+@import "/src/css/pages/about-us.css";

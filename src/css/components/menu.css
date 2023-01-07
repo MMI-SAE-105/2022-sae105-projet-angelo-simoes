@@ -99,7 +99,7 @@ Ne pas oublier d'ajouter une transition plus haut pour l'animation */
   font-size: var(--heading-3);
   display: inline-block;
   padding-top: 1rem;
-  margin-right: 8%;
+  margin-right: 5%;
 }
 
 .menu__separation-line {
