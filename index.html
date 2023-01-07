@@ -53,13 +53,13 @@
 <!-- Contenu principal de la page -->
     <main class="main">
         <div class="home__header container">
+            <h3 class="home__last-articles uppercase">Les derniers souvenirs</h3>
             <p class="home__introduction">Laissez vous guider à travers ce voyage vers l’enfance.</p>   
-            <h2 class="home__last-articles">les derniers articles</h2>
         </div>
         
 <section class="section"
       x-data="{ 'cards' : async ()=> {
-        const resp = await fetch('/src/data/article.json');
+        const resp = await fetch('/src/data/articleFR.json');
         return await resp.json();
 }}">
     <template x-for="card in cards" :key="card.id">
@@ -68,7 +68,7 @@
                 <img :src="card.picture" :alt="card.picture_desc">
             </div>
             <div class="card__caption">
-                <p class="card__title" x-text="card.title"></p>
+                <h2 class="card__title" x-text="card.title"></h2>
                 <p class="card__excerpt" x-text="card.excerpt"></p>
                 <a class="card__link morelink uppercase" :href="card.link">lire la suite</a>
             </div>

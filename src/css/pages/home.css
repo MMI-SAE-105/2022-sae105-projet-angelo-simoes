@@ -3,6 +3,12 @@
     font-style: italic;
 }
 
+.home__last-articles{
+    font-size: var(--heading-1);
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+}
+
 .home__header{
     margin-bottom: -128px;
 }
