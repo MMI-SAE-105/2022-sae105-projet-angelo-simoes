@@ -18,11 +18,11 @@
     position: relative;
     
   }
-  .card-prjects__img-retouch{
+  .card-projects__img-retouch{
     border-radius: 5px;
   }
 
-  .card-projects__caption {
+  .card-projects__caption{
     padding: 0 auto 0 auto;
     margin-top: -60px;
     margin-left: auto;
@@ -34,7 +34,6 @@
     border: 0.1rem solid var(--dark--blue--text);
   }
   
-  /* Même technique utilisé pour "hero" => flex sert à aligner le contenu en bas de l'élément et laisse la possibilité au texte de s'étendre vers le haut. */
   .card-projects__title {
     text-align: center;
   }
@@ -53,4 +52,6 @@
     font-weight: 500;
     font-size: var(--card--title);
   }
+
+
   

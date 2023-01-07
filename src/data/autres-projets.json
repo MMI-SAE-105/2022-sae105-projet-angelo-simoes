@@ -53,9 +53,17 @@
         "id": 7,
         "title": "Advanced Technology",
         "name": "Maxime Ruchet",
-        "link": "  https://advancing-technologie.maximeruchet.fr/fr/",
+        "link": "https://advancing-technologie.maximeruchet.fr/fr/",
         "picture": "/public/img/projets/maxime-projet.webp",
         "picture_desc": "La ville de Vancouver au Canada"
+      },
+      {
+        "id": 8,
+        "title": "Society Mind",
+        "name": "Emma Wettle",
+        "link": "https://societymind.emmawettle.fr/fran%C3%A7ais/accueil.html",
+        "picture": "/public/img/projets/projet-emma.webp",
+        "picture_desc": "Site Emma"
       }
   
   ]
