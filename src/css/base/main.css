@@ -109,3 +109,9 @@ uniquement accessible aux lecteurs vocaux (sr = screen reader) */
 a:hover {
   text-decoration: none;
 }
+
+.page-introduction{
+  font-family: var(--font-sans-serif);
+  font-size: var(--small--text);
+  font-weight: 300;
+}

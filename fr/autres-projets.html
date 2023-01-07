@@ -48,59 +48,28 @@
         </div>      
     </header>
 <!-- Fin de l'en-tête de page -->
-    <main class="main">
-        <h1>Autres projets</h1>
-        <section>
-            <article>
-                <img src="/public/img/projets/Projet_Enes.webp" alt="Ile Galapagos">
-                <h2>Trav-All</h2>
-                <h3>Enes Tavukcu</h3>
-            </article>
-            <article>
-                <img src="/public/img/projets/projet_oli.webp" alt="Enfants Sri Lankais">
-                <h2>Génocide caché</h2>
-                <h3>Oliventhan Thamilselvan</h3>
-            </article>
-            <article>
-                <img src="/public/img/projets/Projet_Atnan.webp" alt="Jojo's Bizarre Adventure">
-                <h2>Reboot</h2>
-                <h3>Atnan Tas</h3>
-            </article>
-            <article>
-                <img src="/public/img/projets/projet_louis.webp" alt="Son Goku de Dragon Ball">
-                <h2>Back To The Youth</h2>
-                <h3>Louis Vachon</h3>
-            </article>
-            <article>
-                <img src="/public/img/projets/kubilay_projet.webp" alt="Mosquée Sainte Sophie à Istanbul">
-                <h2>Past Life</h2>
-                <h3>Kubilay Yardimli</h3>
-            </article>
-            <article>
-                <img src="" alt="Ile Galapagos">
-                <h2>Autre monde</h2>
-                <h3>Enzo Tournoux</h3>
-            </article>
-            <article>
-                <img src="" alt="Ile Galapagos">
-                <h2>Ne m'oublie pas</h2>
-                <h3>Samantha Saffache</h3>
-            </article>
-            <article>
-                <img src="" alt="Ile Galapagos">
-                <h2>Reminiscience</h2>
-                <h3>Zoe Schoellhammer</h3>
-            </article>
-            <article>
-                <img src="" alt="Ile Galapagos">
-                <h2>Society Mind</h2>
-                <h3>Emma Wettle</h3>
-            </article>
-            <article>
-                <img src="" alt="Ile Galapagos">
-                <h2>The War</h2>
-                <h3>Youssef Wali</h3>
-            </article>
+    <main class="main container">
+        <div class="others-projects__header">
+            <h1 class="article-title">Autres projets</h1>
+            <p class="page-introduction">Ici vous pouvez retrouver les projets de mes camarades de classes !</p>
+        </div>
+
+        <section class="section"
+        x-data="{ 'cards' : async ()=> {
+        const resp = await fetch('/src/data/autres-projets.json');
+        return await resp.json();
+        }}">
+            <template x-for="card in cards" :key="card.id">
+                <article class="card-projects">
+                    <div class="card-projects__img">
+                        <img class="card-prjects__img-retouch" :src="card.picture" :alt="card.picture_desc">
+                    </div>
+                    <div class="card-projects__caption">
+                        <h2 class="card-projects__title"><a x-text="card.title" class="card-projects__title-link" :href="card.link"></a></h2>
+                        <h3 class="card-projects__name" x-text="card.name"></h3>
+                    </div>
+                </article>
+            </template>
         </section>
     </main>
 <!-- Fin du contenu principal -->

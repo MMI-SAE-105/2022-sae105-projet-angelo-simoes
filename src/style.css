@@ -32,9 +32,11 @@ Soyez attentifs à l'ordre d'import :
 /* Composants */
 @import "/src/css/components/menu.css";
 @import "/src/css/components/card.css";
+@import "/src/css/components/card-projects.css";
 
 /* Pages */
 @import "/src/css/pages/contact.css";
 @import "/src/css/pages/glossary.css";
 @import "/src/css/pages/home.css";
 @import "/src/css/pages/about-us.css";
+@import "/src/css/pages/others-projects.css";
