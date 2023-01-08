@@ -33,6 +33,8 @@ Flex sert à positionner les éléments de l'en-tête (header__start et header__
 
 .header__logo-lang{
   margin-top: 25px;
+  width: 48px;
+  height: 32px;
 }
 
 
