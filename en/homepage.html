@@ -18,7 +18,7 @@
     <header class="header container">
         <div>
             <a class="header__lien_logo" href="/en/homepage.html">
-                <h1 class="header__logo">Memories</h1>
+                <h3 class="header__logo">Memories</h3>
             </a>   
         </div>
     
@@ -60,7 +60,7 @@
                 return await resp.json();
         }}">
             <div class="home__header container">
-                <h3 class="home__last-articles uppercase">Last Memories</h3>
+                <h1 class="home__last-articles uppercase">Last Memories</h1>
                 <p class="home__introduction">Let yourself be guided through this journey to childhood.</p>   
             </div>
             <template x-for="card in cards" :key="card.id">
