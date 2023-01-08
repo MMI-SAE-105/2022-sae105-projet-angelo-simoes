@@ -42,7 +42,6 @@
                     <li class="menu__item_primary"><a class="menu__link" href="/fr/espoir.html">Une lueur d’espoir pour l’avenir de la Terre</a></li>
                     <li class="menu__item_primary"><a class="menu__link" href="/fr/crainte.html">Quel avenir pour notre planète ?</a></li>
                     <li class="menu__item_primary"><a class="menu__link" href="/fr/autres-projets.html">Autres Projets</a></li>
-                    <hr class="menu__separation-line">
                     <li class="menu__item_secondary"><a class="menu__link" href="/fr/glossaire.html">Glossaire</a></li>
                     <li class="menu__item_secondary"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
                     <li class="menu__item_secondary capitalize"><a class="menu__link" href="/fr/à_propos.html">à propos</a></li>
@@ -55,29 +54,28 @@
 
 <!-- Contenu principal de la page -->
     <main class="main">
-        <div class="home__header container">
-            <h3 class="home__last-articles uppercase">Les derniers souvenirs</h3>
-            <p class="home__introduction">Laissez vous guider à travers ce voyage vers l’enfance.</p>   
-        </div>
-        
-<section class="section"
-      x-data="{ 'cards' : async ()=> {
-        const resp = await fetch('/src/data/articleFR.json');
-        return await resp.json();
-}}">
-    <template x-for="card in cards" :key="card.id">
-        <article class="card">
-            <div class="card__img ">
-                <img :src="card.picture" :alt="card.picture_desc">
+        <section class="section"
+            x-data="{ 'cards' : async ()=> {
+                const resp = await fetch('/src/data/articleFR.json');
+                return await resp.json();
+        }}">
+            <div class="home__header container">
+                <h3 class="home__last-articles uppercase">Les derniers souvenirs</h3>
+                <p class="home__introduction">Laissez vous guider à travers ce voyage vers l’enfance.</p>   
             </div>
-            <div class="card__caption">
-                <h2 class="card__title" x-text="card.title"></h2>
-                <p class="card__excerpt" x-text="card.excerpt"></p>
-                <a class="card__link uppercase" :href="card.link">lire la suite</a>
-            </div>
-        </article>
-    </template>
-</section>
+            <template x-for="card in cards" :key="card.id">
+                <article class="card">
+                    <div class="card__img ">
+                        <img :src="card.picture" :alt="card.picture_desc">
+                    </div>
+                    <div class="card__caption">
+                        <h2 class="card__title" x-text="card.title"></h2>
+                        <p class="card__excerpt" x-text="card.excerpt"></p>
+                        <a class="card__link uppercase" :href="card.link">lire la suite</a>
+                    </div>
+                </article>
+            </template>
+        </section>
 
     </main>
 <!-- Fin du contenu principal -->

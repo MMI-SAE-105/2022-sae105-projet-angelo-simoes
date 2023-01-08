@@ -42,7 +42,6 @@
                     <li class="menu__item_primary"><a class="menu__link" href="/en/hope.html">A glow of hope for the future of the Earth</a></li>
                     <li class="menu__item_primary"><a class="menu__link" href="/en/fear.html">What future for our planet?</a></li>
                     <li class="menu__item_primary"><a class="menu__link" href="/en/others_projects.html">Others Projects</a></li>
-                    <hr class="menu__separation-line">
                     <li class="menu__item_secondary"><a class="menu__link" href="/en/glossary.html">Glossary</a></li>
                     <li class="menu__item_secondary"><a class="menu__link" href="/en/contactEN.html">Contact</a></li>
                     <li class="menu__item_secondary capitalize"><a class="menu__link" href="/en/about_us.html">about us</a></li>
@@ -54,17 +53,16 @@
 <!-- Fin de l'en-tête de page -->
 
 <!-- Contenu principal de la page -->
-    <main class="main">
-        <div class="home__header container">
-            <h3 class="home__last-articles uppercase">Last Memories</h3>
-            <p class="home__introduction">Let yourself be guided through this journey to childhood.</p>   
-        </div>
-        
+    <main class="main">        
         <section class="section"
             x-data="{ 'cards' : async ()=> {
                 const resp = await fetch('/src/data/articleEN.json');
                 return await resp.json();
         }}">
+            <div class="home__header container">
+                <h3 class="home__last-articles uppercase">Last Memories</h3>
+                <p class="home__introduction">Let yourself be guided through this journey to childhood.</p>   
+            </div>
             <template x-for="card in cards" :key="card.id">
                 <article class="card">
                     <div class="card__img ">
