@@ -1,36 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Site du projet pédagogique 'Memories' réalisé par Angelo Simoes">
+    <title>Chang, when PNL reminds us of their past - Memories</title>
+<!-- Déclaration de la feuille de style -->
+    <link rel="stylesheet" href="/src/style.css">
+<!-- Chargement de la librairie Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
 </head>
-<body>
-    <main>
+
+<body>   
+<!-- En-tête de la page -->
+    <header class="header container">
+        <div>
+            <a class="header__lien_logo" href="/en/homepage.html">
+                <h1 class="header__logo">Memories</h1>
+            </a>   
+        </div>
+    
+        <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+                    <span class="menu-btn__bar"></span>
+            </button>
+
+        <!-- Menu principal -->
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/movie.html">Spirited Away, Miyazaki's depiction of society</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/book.html">One Piece, popculture icon</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/music.html">Chang, when PNL reminds us of their past</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/place.html">Portugal, a journey through 800 years of history</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/hope.html">A glow of hope for the future of the Earth</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/fear.html">What future for our planet?</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/others_projects.html">Others Projects</a></li>
+                    <hr class="menu__separation-line">
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/glossary.html">Glossary</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/contactEN.html">Contact</a></li>
+                    <li class="menu__item_secondary capitalize"><a class="menu__link" href="/en/about_us.html">about us</a></li>
+                </ul>
+            </nav>
+        <!-- Fin du menu principal -->
+        </div>    
+    </header>
+<!-- Fin de l'en-tête de page -->
+
+<!-- Contenu principal de la page -->
+    <main class="main container">
         <section>
-            <h1>Chang, when PNL reminds us of their past</h1>
-            <p>Divided between regret and good times, PNL takes us back to their childhood with a touch of melancholy.</p>
-            <p>By Angelo Simoes</p>
+            <h1 class="article__title">Chang, when PNL reminds us of their past</h1>
+            <p class="article__introduction">Divided between regret and good times, PNL takes us back to their childhood with a touch of melancholy.</p>
+            <p class="article__introduction-name">By Angelo Simoes</p>
             <div>
-                <img src="" alt="The group contemplating Paris from the Eiffel Tower">
-                <p>The group contemplating Paris from the Eiffel Tower</p>
+                <figure class="article__img">
+                    <img src="/public/img/Musique/PNL_tour_eiffel.webp" alt="The group contemplating Paris from the Eiffel Tower">
+                    <figcaption class="article__img-legend">The group contemplating Paris from the Eiffel Tower</figcaption>
+                </figure>
             </div>
-            <h3>Back on the Earth</h3>
-            <p> It's 8pm, it's March 22nd 2019, the two brothers from Tarterêts arrive like a comet on the French rap scene and slap the French rap landscape with the release of the Au DD clip shot on the Eiffel Tower. At the end of the clip, which will have cost more than 400 000 euros, the group gives us an appointment two weeks later, on March 5th 2019 for a new album more than 3 years after the last one. The sound will break notable records as the most streamed music on platforms, 12 million views in 48 hours on the clip and trending in several countries around the world, this return will have a tidal wave effect. The hype is at its peak, the Deux Frères era is launched.</p>
+            <h2 class="article__subheadings">Back on the Earth</h2>
+            <p class="article__text"> It's 8pm, it's March 22nd 2019, the two brothers from Tarterêts arrive like a comet on the French rap scene and slap the French rap landscape with the release of the Au DD clip shot on the Eiffel Tower. At the end of the clip, which will have cost more than 400 000 euros, the group gives us an appointment two weeks later, on March 5th 2019 for a new album more than 3 years after the last one. The sound will break notable records as the most streamed music on platforms, 12 million views in 48 hours on the clip and trending in several countries around the world, this return will have a tidal wave effect. The hype is at its peak, the Deux Frères era is launched.</p>
             <div>
-                <img src="" alt="In the sound J'suis QLF released in 2016, this time seems long gone">
-                <p>In the sound "J'suis QLF" released in 2016, this time seems long gone</p>
+                <video poster="/public/img/Musique/thumbnail-audd.webp" class="article__video" src="https://medias.angelo-simoes.fr/PNL-Au-DD.mp4" controls></video>
+                <figcaption class="article__img-legend">The Au DD clip that was shot on the Eiffel Tower!</figcaption>
             </div>
-            <p>
-                It's D-day, the album is out and from the first listen we know we're listening to something special and exceptional that will make a mark in French rap. They push the productions of their album to an even higher level by collaborating with Joa (TrackBastardz), Yann Dakta & Rednose and of course BBP, all supervised by the work that borders on perfection in musical engineering of Nikola Feve aka Nk.F. The album is already a critical and commercial success, it accumulates more than 113,000 sales in 1 week, including 62,787 physical sales, at a time when streaming is the biggest source of listening.
-            </p>
-            <h3>More personal than ever</h3>
-            <p>
-                Let's stop on the third track of the album called Chang, a melancholic and nostalgic track, a well known recipe of the band. In this track, the two brothers go back to their past and in particular the second verse of NOS which is the highlight of the track.
-                With this verse we travel with NOS to his childhood where he grew up as if we were there with a very pictorial writing.
-            </p>
-            <p>
+            <h2 class="article__subheadings">The release of Deux Frères</h2>
+            <p class="article__text">It's D-day, the album is out and from the first listen we know we're listening to something special and exceptional that will make a mark in French rap. They push the productions of their album to an even higher level by collaborating with Joa (TrackBastardz), Yann Dakta & Rednose and of course BBP, all supervised by the work that borders on perfection in musical engineering of Nikola Feve aka Nk.F. The album is already a critical and commercial success, it accumulates more than 113,000 sales in 1 week, including 62,787 physical sales, at a time when streaming is the biggest source of listening.</p>
+            <div>
+                <figure class="article__img">
+                    <img src="/public/img/Musique/pnl_caption.webp" alt="In the sound J'suis QLF released in 2016, this time seems long gone">
+                    <figcaption class="article__img-legend">In the sound "J'suis QLF" released in 2016, this time seems long gone</figcaption>
+                </figure>
+            </div>
+            <h2 class="article__subheadings">More personal than ever</h2>
+            <p class="article__text">Let's stop on the third track of the album called Chang, a melancholic and nostalgic track, a well known recipe of the band. In this track, the two brothers go back to their past and in particular the second verse of NOS which is the highlight of the track.
+                With this verse we travel with NOS to his childhood where he grew up as if we were there with a very pictorial writing.</p>
+            <blockquote class="music__lyrics">
                 Une chance qu'ils aient pas détruit mon bâtiment
                 P't-être qu'un jour, j'pourrais l'montrer à mes enfants
                 Où avec Tarik, papa, Sarah j'ai di-gran
@@ -42,49 +91,65 @@
                 Pour juste une fois ressentir le passé
                 Revenir là où tout a commencé
                 Car on était aussi heureux, je le sais
-            </p>
-            <div>
-                <img src="" alt="This famous building during the promotion of the album">
-                <p>This famous building during the promotion of the album</p>
-            </div>
-            <p>In the following verse we are carried away by the spleen and the voice full of emotions of NOS who leaves us the free interpretation of the person to whom he addresses. He wishes he could change some of the things that made his family suffer due to the hard life in the suburbs but at the same time remembers that he was also happy at that time when he had nothing in contrast to what he can have now with the fame.</p>
-            <p>
-                J'aimerais sonner à la porte et voir ton visage
-                Sans les rides sur ton visage
-                Te prévenir de ce qui te fera du mal
-                Pour ne pas te voir souffrir toute ma vie
-            </p>
-            <p>Although the author expresses the fact that he misses his past, he does not forget the harm caused by his life on the streets and expresses the wish to change his past to protect his family, especially his father.</p>
-            <p>
-                Et le présent m'chuchote : "Poto tu vas souffrir"
-                Donc mes enfants, j'leur mentirai que j'suis heureux
-                Qu'ils soient jamais comme moi, jamais dans les ténèbres
-                Sur cette chaise, dans ce hall, j'me sens si bien
-                Ça me rappelle quand j'avais des rêves en chien
-            </p>
-            <p>
-                In this passage we understand that his father's life has strongly affected him as a child and still does. That's why he thinks it's better for him and his future children to lie to them so as not to repeat a similar pattern. The image of the chair shows that he is still suffering from his old life and does not see any glimmer of hope.
-            </p>
-            <p>
-                Et je r'viendrai quelques fois regarder la porte, sans toquer, sans sonner, jusqu'à ma mort
-                Et je r'viendrai quelques fois regarder la porte, sans toquer, sans sonner, jusqu'à ma mort
-            </p>
-            <p>In this passage, which closes this sound, we can see that he feels forever linked to his former life, especially with death being addressed.</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/03hV7gDsUl3vSPu6XZDMst?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </blockquote>
+                <div>
+                    <figure class="article__img">
+                        <img src="/public/img/Musique/pnl_batiment.webp" alt="This famous building during the promotion of the album">
+                        <figcaption class="article__img-legend">This famous building during the promotion of the album</figcaption>
+                    </figure>
+                </div>
+                <p class="article__text">In the following verse we are carried away by the spleen and the voice full of emotions of NOS who leaves us the free interpretation of the person to whom he addresses. He wishes he could change some of the things that made his family suffer due to the hard life in the suburbs but at the same time remembers that he was also happy at that time when he had nothing in contrast to what he can have now with the fame.</p>
+                <blockquote class="music__lyrics">
+                    J'aimerais sonner à la porte et voir ton visage
+                    Sans les rides sur ton visage
+                    Te prévenir de ce qui te fera du mal
+                    Pour ne pas te voir souffrir toute ma vie
+                </blockquote>
+                <p class="article__text">Although the author expresses the fact that he misses his past, he does not forget the harm caused by his life on the streets and expresses the wish to change his past to protect his family, especially his father.
+                </p>
+                <blockquote class="music__lyrics">
+                    Et le présent m'chuchote : "Poto tu vas souffrir"
+                    Donc mes enfants, j'leur mentirai que j'suis heureux
+                    Qu'ils soient jamais comme moi, jamais dans les ténèbres
+                    Sur cette chaise, dans ce hall, j'me sens si bien
+                    Ça me rappelle quand j'avais des rêves en chien
+                </blockquote>
+                <p class="article__text">In this passage we understand that his father's life has strongly affected him as a child and still does. That's why he thinks it's better for him and his future children to lie to them so as not to repeat a similar pattern. The image of the chair shows that he is still suffering from his old life and does not see any glimmer of hope.</p>
+                <blockquote class="music__lyrics">
+                    Et je r'viendrai quelques fois regarder la porte, sans toquer, sans sonner, jusqu'à ma mort
+                    Et je r'viendrai quelques fois regarder la porte, sans toquer, sans sonner, jusqu'à ma mort
+                </blockquote>
+                <p class="article__text"> In this passage, which closes this sound, we can see that he feels forever linked to his former life, especially with death being addressed.
+                </p>
+                <div>
+                    <h2 class="article__subheadings">Chang on Spotify</h2>
+                    <iframe class="music__spotify" style="border-radius:12px" src="https://open.spotify.com/embed/track/03hV7gDsUl3vSPu6XZDMst?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
         </section>
-
     </main>
-    <footer>
-        <h2>memories</h2>
-        <ul>
-            <li><a href="/en/glossary.html"></a>glossary</li>
-            <li><a href="/en/contactEN.html"></a>contact</li>
-            <li><a href="/en/about_us.html"></a>about us</li>
+<!-- Fin du contenu principal -->
+
+<!-- Pied de page -->  
+<footer class="footer">
+    <a class="footer__lien_title" href="/en/homepage.html">
+        <h1 class="footer__title">Memories</h1>
+    </a> 
+
+    <nav class="footer__menu">
+        <ul class="list-unstyled">
+            <li><a class="footer__menu-item" href="/en/glossary.html">glossary</a></li>
+            <li><a class="footer__menu-item" href="/en/contactEN.html">contact</a></li>
+            <li><a class="footer__menu-item" href="/en/about_us.html">about us</a></li>
         </ul>
+    </nav>
+
+    <div class="footer__description">
         <p>Angelo SIMOES C2</p>
-        <a href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
-        <p>Project carried out as part of an educational exercise in the MMI department of Montbéliard</a></p>
-        <img src="/public/img/MMI_logo.svg" alt="MMi Logo">
-    </footer>
+        <a class="footer__link" href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
+        <p>Project carried out as part of an educational exercise in the <a class="footer__link" href="http://mmimontbeliard.com/">MMI department of Montbéliard</a></p>
+    </div>
+    
+    <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
+</footer>
 </body>
 </html>

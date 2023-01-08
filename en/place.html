@@ -1,32 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place</title>
+    <meta name="description" content="Site du projet pédagogique 'Memories' réalisé par Angelo Simoes">
+    <title>Portugal, a journey through 800 years of history - Memories</title>
+<!-- Déclaration de la feuille de style -->
+    <link rel="stylesheet" href="/src/style.css">
+<!-- Chargement de la librairie Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
 </head>
-<body>
-    <main>
+
+<body>   
+<!-- En-tête de la page -->
+    <header class="header container">
+        <div>
+            <a class="header__lien_logo" href="/en/homepage.html">
+                <h1 class="header__logo">Memories</h1>
+            </a>   
+        </div>
+    
+        <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+                    <span class="menu-btn__bar"></span>
+            </button>
+
+        <!-- Menu principal -->
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/movie.html">Spirited Away, Miyazaki's depiction of society</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/book.html">One Piece, popculture icon</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/music.html">Chang, when PNL reminds us of their past</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/place.html">Portugal, a journey through 800 years of history</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/hope.html">A glow of hope for the future of the Earth</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/fear.html">What future for our planet?</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/others_projects.html">Others Projects</a></li>
+                    <hr class="menu__separation-line">
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/glossary.html">Glossary</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/contactEN.html">Contact</a></li>
+                    <li class="menu__item_secondary capitalize"><a class="menu__link" href="/en/about_us.html">about us</a></li>
+                </ul>
+            </nav>
+        <!-- Fin du menu principal -->
+        </div>    
+    </header>
+<!-- Fin de l'en-tête de page -->
+
+<!-- Contenu principal de la page -->
+    <main class="main container">
         <section>
-            <h2>Portugal, a journey through 800 years of history</h2>
-            <p>Portugal is a small country but a land full of history, let's travel through more than 800 years of existence composed of highs and lows.</p>
-            <p>By Angelo Simoes</p>
+            <h1 class="article__title">Portugal, a journey through 800 years of history</h1>
+            <p class="article__introduction">Portugal is a small country but a land full of history, let's travel through more than 800 years of existence composed of highs and lows.</p>
+            <p class="article__introduction-name">By Angelo Simoes</p>
             <div>
-                <img src="" alt="Lisbon Bridge and Cristo Rei">
-                <p>Lisbon Bridge and Cristo Rei</p>
+                <figure class="article__img">
+                    <img src="/public/img/Lieu/pont_lisbonne.webp" alt="Lisbon Bridge and Cristo Rei">
+                    <figcaption class="article__img-legend">Lisbon Bridge and Cristo Rei</figcaption>
+                </figure>
             </div>
-            <h3>A bit of history...</h3>
-            <p>
-                On 22 April 1500, Pedro Álvares Cabral led his fleet to the distant shore of Brazil. This small country on the Iberian Peninsula became one of the great maritime forces in history. The beginning of the change and the decline of the country will start with the independence of Brazil in 1822 and then Portugal will be under a dictatorial regime for more than 4 decades in the middle of the 20th century until it becomes the poorest country in Western Europe. This authoritarian regime ended in 1974 following the Carnation Revolution. Today, this country, rich in history and landscape, is being reborn and is becoming a land of welcome.
-            </p>
+            <h2 class="article__subheadings">A bit of history...</h2>
+            <p class="article__text">On 22 April 1500, Pedro Álvares Cabral led his fleet to the distant shore of Brazil. This small country on the Iberian Peninsula became one of the great maritime forces in history. The beginning of the change and the decline of the country will start with the independence of Brazil in 1822 and then Portugal will be under a dictatorial regime for more than 4 decades in the middle of the 20th century until it becomes the poorest country in Western Europe. This authoritarian regime ended in 1974 following the Carnation Revolution. Today, this country, rich in history and landscape, is being reborn and is becoming a land of welcome.</p>
             <div>
-                <img src="" alt="Demonstration in Lisbon against the authoritarian regime">
-                <p>Demonstration in Lisbon against the authoritarian regime</p>
+                <figure class="article__img">
+                    <img src="/public/img/Lieu/oeillets-revolution.webp" alt="Demonstration in Lisbon against the authoritarian regime">
+                    <figcaption class="article__img-legend">Demonstration in Lisbon against the authoritarian regime</figcaption>
+                </figure>
             </div>
-            <h3>Some places to visit</h3>
-            <p>
-                Today this country is a land of welcome for many people wishing to expatriate. Here we will look at a few historical or worthwhile places in this country.
+            <h2 class="article__subheadings">Some places to visit</h2>
+            <p class="article__text">Today this country is a land of welcome for many people wishing to expatriate. Here we will look at a few historical or worthwhile places in this country.
                 The first one is the Belem Tower, a building built in the 16th century which was used as a fortress and a harbour and is now a UNESCO World Heritage Site. This monument is the ideal representation of the architectural style of Portugal at the time, the Manueline style.
                 The statue of Christ the King or Cristo Rei in Portuguese is a huge structure of 110 meters high overhanging the estuary of the Tagus River in Lisbon. This representation of Christ inspired by the Christ the Redeemer in the city of Rio de Janeiro in Brazil is a stronghold for pilgrims.
                 The next monument is the National Palace of Pena, located in a 200 hectare park this palace mixes different architectural styles such as baroque, gothic, and manueline. This is due to the cultural mix of the prince who requested it who was of German origin before migrating to Portugal.
@@ -34,18 +79,29 @@
                 Finally, the last place to be discussed is the Benagil cave in the south of Portugal in the Algarve region. Located on a beach, this cave is in fact a stone dome that lets the sun's rays through thanks to erosion over time.
             </p>
         </section>
-    </main>
-    <footer>
-        <h2>memories</h2>
-        <ul>
-            <li><a href="/en/glossary.html"></a>glossary</li>
-            <li><a href="/en/contactEN.html"></a>contact</li>
-            <li><a href="/en/about_us.html"></a>about us</li>
+<!-- Fin du contenu principal -->
+
+<!-- Pied de page -->  
+<footer class="footer">
+    <a class="footer__lien_title" href="/en/homepage.html">
+        <h1 class="footer__title">Memories</h1>
+    </a> 
+
+    <nav class="footer__menu">
+        <ul class="list-unstyled">
+            <li><a class="footer__menu-item" href="/en/glossary.html">glossary</a></li>
+            <li><a class="footer__menu-item" href="/en/contactEN.html">contact</a></li>
+            <li><a class="footer__menu-item" href="/en/about_us.html">about us</a></li>
         </ul>
+    </nav>
+
+    <div class="footer__description">
         <p>Angelo SIMOES C2</p>
-        <a href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
-        <p>Project carried out as part of an educational exercise in the MMI department of Montbéliard</a></p>
-        <img src="/public/img/MMI_logo.svg" alt="MMi Logo">
-    </footer>
+        <a class="footer__link" href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
+        <p>Project carried out as part of an educational exercise in the <a class="footer__link" href="http://mmimontbeliard.com/">MMI department of Montbéliard</a></p>
+    </div>
+    
+    <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
+</footer>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site du projet pédagogique 'Memories' réalisé par Angelo Simoes">
-    <title>Contact - Memories</title>
+    <title>Memories</title>
 <!-- Déclaration de la feuille de style -->
     <link rel="stylesheet" href="/src/style.css">
 <!-- Chargement de la librairie Alpine JS -->
@@ -50,50 +50,56 @@
     </header>
 <!-- Fin de l'en-tête de page -->
 
-    <main class="main container">
-        <h1 class="article__title">Contact</h1>
-        <section>
-            <p class="article__introduction">If you want more information do not hesitate to contact me!</p>
-          <form action="#">
-            <div >
-              <label for="name" class="contact__form-label">Name</label>
-              <input type="text" name="name" id="name" class="contact__form-input" placeholder="Enter your name">
-            </div>
-            <div>
-              <label for="email" class="contact__form-label">Email</label>
-              <input type="email" name="email" id="email" class="contact__form-input" placeholder="Enter your email">
-            </div>
-            <div>
-              <label for="message" class="contact__form-label">Message</label>
-              <textarea id="message" name="message" rows="8" class="contact__form-input" placeholder="Enter your message"></textarea>
-            </div>
-            <button class="contact__form-button uppercase" type="submit">send</button>
-          </form>
+<!-- Contenu principal de la page -->
+    <main class="main">
+        <div class="home__header container">
+            <h3 class="home__last-articles uppercase">Last Memories</h3>
+            <p class="home__introduction">Let yourself be guided through this journey to childhood.</p>   
+        </div>
+        
+        <section class="section"
+            x-data="{ 'cards' : async ()=> {
+                const resp = await fetch('/src/data/articleEN.json');
+                return await resp.json();
+        }}">
+            <template x-for="card in cards" :key="card.id">
+                <article class="card">
+                    <div class="card__img ">
+                        <img :src="card.picture" :alt="card.picture_desc">
+                    </div>
+                    <div class="card__caption">
+                        <h2 class="card__title" x-text="card.title"></h2>
+                        <p class="card__excerpt" x-text="card.excerpt"></p>
+                        <a class="card__link uppercase" :href="card.link">read more</a>
+                    </div>
+                </article>
+            </template>
         </section>
+
     </main>
 <!-- Fin du contenu principal -->
 
 <!-- Pied de page -->  
-<footer class="footer">
-  <a class="footer__lien_title" href="/en/homepage.html">
-      <h1 class="footer__title">Memories</h1>
-  </a> 
+    <footer class="footer">
+        <a class="footer__lien_title" href="/en/homepage.html">
+            <h1 class="footer__title">Memories</h1>
+        </a> 
 
-  <nav class="footer__menu">
-      <ul class="list-unstyled">
-          <li><a class="footer__menu-item" href="/en/glossary.html">glossary</a></li>
-          <li><a class="footer__menu-item" href="/en/contactEN.html">contact</a></li>
-          <li><a class="footer__menu-item" href="/en/about_us.html">about us</a></li>
-      </ul>
-  </nav>
+        <nav class="footer__menu">
+            <ul class="list-unstyled">
+                <li><a class="footer__menu-item" href="/en/glossary.html">glossary</a></li>
+                <li><a class="footer__menu-item" href="/en/contactEN.html">contact</a></li>
+                <li><a class="footer__menu-item" href="/en/about_us.html">about us</a></li>
+            </ul>
+        </nav>
 
-  <div class="footer__description">
-      <p>Angelo SIMOES C2</p>
-      <a class="footer__link" href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
-      <p>Project carried out as part of an educational exercise in the <a class="footer__link" href="http://mmimontbeliard.com/">MMI department of Montbéliard</a></p>
-  </div>
-  
-  <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
-</footer>
+        <div class="footer__description">
+            <p>Angelo SIMOES C2</p>
+            <a class="footer__link" href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
+            <p>Project carried out as part of an educational exercise in the <a class="footer__link" href="http://mmimontbeliard.com/">MMI department of Montbéliard</a></p>
+        </div>
+        
+        <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
+    </footer>
 </body>
 </html>

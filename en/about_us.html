@@ -1,41 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+    <meta name="description" content="Site du projet pédagogique 'Memories' réalisé par Angelo Simoes">
+    <title>About us - Memories</title>
+<!-- Déclaration de la feuille de style -->
+    <link rel="stylesheet" href="/src/style.css">
+<!-- Chargement de la librairie Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
 </head>
-<body>
-    <header>
 
+<body>   
+<!-- En-tête de la page -->
+    <header class="header container">
+        <div>
+            <a class="header__lien_logo" href="/en/homepage.html">
+                <h1 class="header__logo">Memories</h1>
+            </a>   
+        </div>
+    
+        <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+                    <span class="menu-btn__bar"></span>
+            </button>
+
+        <!-- Menu principal -->
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/movie.html">Spirited Away, Miyazaki's depiction of society</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/book.html">One Piece, popculture icon</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/music.html">Chang, when PNL reminds us of their past</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/place.html">Portugal, a journey through 800 years of history</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/hope.html">A glow of hope for the future of the Earth</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/fear.html">What future for our planet?</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/others_projects.html">Others Projects</a></li>
+                    <hr class="menu__separation-line">
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/glossary.html">Glossary</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/contactEN.html">Contact</a></li>
+                    <li class="menu__item_secondary capitalize"><a class="menu__link" href="/en/about_us.html">about us</a></li>
+                </ul>
+            </nav>
+        <!-- Fin du menu principal -->
+        </div>    
     </header>
-    <main>
-        <h1>About us</h1>
+<!-- Fin de l'en-tête de page -->
+
+<!-- Contenu principal de la page -->
+    <main class="main container">
+        <h2 class="capitalize article__title">about us</h2>
         <section>
             <p>This site was created as part of a pedagogical project by Angelo Simoes, a first-year student in the MMI (Multimedia and Internet) department of the IUT of Belfort-Montbéliard. This project is called "Notes for later", the basic premise was to present to our future selves different elements which are :</p>
             <ul>
                 <li><a href="/en/place.html"></a>A place</li>
                 <li><a href="/en/book.html"></a>A book</li>
-                <li><a href="/en/movie.html"></a>A film</li>
+                <li><a href="/en/movie.html"></a>A movie</li>
                 <li><a href="/en/music.html"></a>A music</li>
                 <li><a href="/en/fear.html"></a>A regret of our generation</li>
                 <li><a href="/en/hope.html"></a>A hope of our generation</li>
             </ul>
             <p>My way of approaching this exercise is to talk about things that particularly pleased me when I was young and that I can go back to in the future for nostalgia.</p>
+            <div>
+                <img class="a-propos__avatar" src="/public/img/angelo-simoes-avatar.png" alt="avatar angelo simoes">
+                <p class="a-propos__avatar-presentation">Angelo Simoes</p>
+                <p class="a-propos__avatar-presentation">MMi 1st year - Group C2</p>
+            </div>
+            <div>
+                <p>Here is a micro-trottoir realized within the framework of our studies which allows to show you the extent of the competences seen in this training.</p>
+                <video poster="/public/img/projets/presentation_mmi.webp" class="article__video" src="https://medias.angelo-simoes.fr/Micro-trottoir_anglais_mp4_Angelo_Simoes_Oliventhan_Thamilselvan_Youssef_Wali.mp4" controls></video>
+            </div>
         </section>
     </main>
-    <footer>
-        <h2>memories</h2>
-        <ul>
-            <li><a href="/en/glossary.html"></a>glossary</li>
-            <li><a href="/en/contactEN.html"></a>contact</li>
-            <li><a href="/en/about_us.html"></a>about us</li>
+<!-- Fin du contenu principal -->
+
+<!-- Pied de page -->  
+<footer class="footer">
+    <a class="footer__lien_title" href="/en/homepage.html">
+        <h1 class="footer__title">Memories</h1>
+    </a> 
+
+    <nav class="footer__menu">
+        <ul class="list-unstyled">
+            <li><a class="footer__menu-item" href="/en/glossary.html">glossary</a></li>
+            <li><a class="footer__menu-item" href="/en/contactEN.html">contact</a></li>
+            <li><a class="footer__menu-item" href="/en/about_us.html">about us</a></li>
         </ul>
+    </nav>
+
+    <div class="footer__description">
         <p>Angelo SIMOES C2</p>
-        <a href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
-        <p>Project carried out as part of an educational exercise in the MMI department of Montbéliard</a></p>
-        <img src="/public/img/MMI_logo.svg" alt="MMi Logo">
-    </footer>
+        <a class="footer__link" href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
+        <p>Project carried out as part of an educational exercise in the <a class="footer__link" href="http://mmimontbeliard.com/">MMI department of Montbéliard</a></p>
+    </div>
+    
+    <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
+</footer>
 </body>
 </html>

@@ -1,56 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Site du projet pédagogique 'Memories' réalisé par Angelo Simoes">
+    <title>Spirited Away, Miyazaki's depiction of society - Memories</title>
+<!-- Déclaration de la feuille de style -->
+    <link rel="stylesheet" href="/src/style.css">
+<!-- Chargement de la librairie Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
 </head>
-<body>
-    <main>
+
+<body>   
+<!-- En-tête de la page -->
+    <header class="header container">
+        <div>
+            <a class="header__lien_logo" href="/en/homepage.html">
+                <h1 class="header__logo">Memories</h1>
+            </a>   
+        </div>
+    
+        <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+                    <span class="menu-btn__bar"></span>
+            </button>
+
+        <!-- Menu principal -->
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/movie.html">Spirited Away, Miyazaki's depiction of society</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/book.html">One Piece, popculture icon</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/music.html">Chang, when PNL reminds us of their past</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/place.html">Portugal, a journey through 800 years of history</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/hope.html">A glow of hope for the future of the Earth</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/fear.html">What future for our planet?</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/others_projects.html">Others Projects</a></li>
+                    <hr class="menu__separation-line">
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/glossary.html">Glossary</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/contactEN.html">Contact</a></li>
+                    <li class="menu__item_secondary capitalize"><a class="menu__link" href="/en/about_us.html">about us</a></li>
+                </ul>
+            </nav>
+        <!-- Fin du menu principal -->
+        </div>    
+    </header>
+<!-- Fin de l'en-tête de page -->
+
+<!-- Contenu principal de la page -->
+    <main class="main container">
         <section>
-            <h1>Spirited Away, Miyazaki's depiction of society</h1>
-            <P>Through this journey through the spirit world, the Japanese director takes a critical look at our current world.</P>
-            <p>By Angelo Simoes</p>
+            <h1 class="article__title">Spirited Away, Miyazaki's depiction of society</h1>
+            <p class="article__introduction">Through this journey through the spirit world, the Japanese director takes a critical look at our current world.</p>
+            <p class="article__introduction-name">By Angelo Simoes</p>
             <div>
-                <img src="/public/img/Film/presentation_voyage_chihiro.webp" alt="Chihiro and the famous train scene">
-                <p>Chihiro and the famous train scene</p>
+                <figure class="article__img">
+                    <img src="/public/img/Film/presentation_voyage_chihiro.webp" alt="Chihiro and the famous train scene">
+                    <figcaption class="article__img-legend">Chihiro and the famous train scene</figcaption>
+                </figure>
             </div>
-            <h3>A dreamlike journey</h3>
-            <p>
+            <h2 class="article__subheadings">A dreamlike journey</h2>
+            <p class="article__text">
                 Released on 20 July 2001 in Japan and officially on 10 April 2002 in France. In this Japanese animated film from Studio Ghibli, the famous director Hayao Miyazaki transports us for 124 minutes into a dreamlike world mixing criticism of society and the passage from childhood to adulthood through the main character Chihiro.  
-                Let's start with a brief synopsis of the film to refresh our ideas or for those who have not seen this famous japanese film.  At the beginning we follow little Chihiro and her parents on their way to their new home following a move. Getting lost on the way, they find themselves in front of a strange tunnel which they decide to cross. Thinking they are in a meadow with an abandoned amusement park, the parents spot an unattended stall with plenty of food, so naturally they decide to help themselves without permission. It is this same food that will turn them into pigs under the helpless eyes of little Chihiro. While trying to escape, believing that she was only living a bad dream, she meets a young boy named Haku who explains to her that she is stuck in the spirit world. 
+                Let's start with a brief synopsis of the film to refresh our ideas or for those who have not seen this famous japanese film.  At the beginning we follow little Chihiro and her parents on their way to their new home following a move. Getting lost on the way, they find themselves in front of a strange tunnel which they decide to cross. Thinking they are in a meadow with an abandoned amusement park, the parents spot an unattended stall with plenty of food, so naturally they decide to help themselves without permission. It is this same food that will turn them into pigs under the helpless eyes of little Chihiro. While trying to escape, believing that she was only living a bad dream, she meets a young boy named Haku who explains to her that she is stuck in the spirit world.
             </p>
-            <h3>The parallel with our reality</h3>
-            <p>
+            <h2 class="article__subheadings">The parallel with our reality</h2>
+            <p class="article__text">
                 Hayao Miyazaki offers us several levels of reading, from a simple cartoon for children where we follow the adventure of a little girl in a strange and fairy world to an animated film that is a metaphor for today's society. During the film Chihiro finds herself working for a money-hungry witch named Yubaba who is the owner of a public bathhouse. In this establishment Miyazaki portrays the world of work, particularly in Japan, and its alienation by portraying characters who are on the verge of slavery. Chihiro finds herself having to face the reality of the world in which she lives as well as the problems encountered by adults, something that is complicated for a young child of 10 years old, but it is with courage, determination and by assuming her responsibilities that she will succeed in growing up just like the viewer.
                 Another subject put on the table during this film is consumption and especially excess. First represented by Chihiro's parents turning into pigs after having swallowed huge quantities of food not meant for them and then by the introduction of a character called "faceless" symbol of hyperconsumption by his limitless appetite but without real need. Unfortunately he will be confronted by our protagonist who will remain unmoved by him despite all the riches he possesses.
             </p>
             <div>
-                <img src="/public/img/Film/voyage_chihiro_sans_visage.webp" alt="The 'faceless' representing excess ">
-                <p>The "faceless" representing excess </p>
+                <figure class="article__img">
+                    <img src="/public/img/Film/voyage_chihiro_sans_visage.webp" alt="The faceless representing excess">
+                    <figcaption class="article__img-legend">The "faceless" representing excess </figcaption>
+                </figure>
             </div>
-            <p>
+            <p class="article__text">
                 At the end of the story, Chihiro's perseverance will allow her to return home with her parents safe and sound and with amnesia about what has just happened, suggesting that it was all imagination.
             </p>
-            <h3>Miyazaki, mainstay of Japanese animation</h3>
-            <p>
-                Co-founder of the famous Studio Ghibli with his peer Isao Takahata in 1985, he will know throughout his filmography through stories in fantastic or not worlds told to us and put forward themes that are dear to him such as pacifism, human greed, environmentalism and other societal problems. Let's go back together on his creations.
-            </p>
-            ###CAROUSEL
+
+            <h2 class="article__subheadings">Miyazaki, mainstay of Japanese animation</h2>
+            <p class="article__text">Co-founder of the famous Studio Ghibli with his peer Isao Takahata in 1985, he will know throughout his filmography through stories in fantastic or not worlds told to us and put forward themes that are dear to him such as pacifism, human greed, environmentalism and other societal problems. Let's go back together on his creations.</p>
+            
+            <div x-data="{}">
+                <div class="carrousel_parent-ecrans">
+            
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/cagliostro.webp" alt="The Castle of Cagliostro (1979)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">The Castle of Cagliostro (1979)</h3>
+                                <p class="carrousel-card__description">The Castle of Cagliostro follows the adventures of the gentleman burglar Edgar de la Cambriole (Lupin III) in the small principality of Cagliostro.</p>    
+                            </div>
+                        </figure>
+                    </div>
+            
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/nausicaa.webp" alt="Nausicaa of The Valley of The Wind (1984)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">Nausicaa of The Valley of The Wind (1984)</h3>
+                                <p class="carrousel-card__description">A thousand years have passed since the fall of industrial civilisation during the "seven days of fire", a global war of immeasurable violence.</p>    
+                            </div>
+                        </figure>
+                    </div>
+            
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img  class="carrousel-card__img-retouch" src="/public/img/Film/chateau-dans-le-ciel.webp" alt="Castle in the Sky (1986)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">Castle in the Sky (1986)</h3>
+                                <p class="carrousel-card__description">Sky pirates, 'Dora's gang', attack a flying fortress; they are looking for a 'flying stone' belonging to a young girl.</p>    
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-4" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/voisin_totoro.webp" alt="My Neighbor Totoro (1988)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">My Neighbor Totoro (1988)</h3>
+                                <p class="carrousel-card__description">Tatsuo Kusakabe, a young anthropologist, arrives in the village where he will move with his two daughters, Satsuki, ten, and Mei, four.</p>    
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-5" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/kiki_sorciere.webp" alt="Kiki's Delivery Service (1989)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">Kiki's Delivery Service (1989)</h3>
+                                <p class="carrousel-card__description">Kiki is a young witch who has just turned thirteen. This is an important date in her family: traditionally at this age, witches have to leave their parents.</p>    
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-6" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/porco_rosso.webp" alt="Porco Rosso (1992)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">Porco Rosso (1992)</h3>
+                                <p class="carrousel-card__description">Marco Pagot, a former pilot in the Royal Italian Army, is transformed into a pig and becomes a bounty hunter under the name "Porco Rosso".</p>    
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-7" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/princesse-momonoke.webp" alt="Princess Mononoke (1997)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">Princess Mononoke (1997)</h3>
+                                <p class="carrousel-card__description">The story takes place in medieval Japan (Muromachi era). Ashitaka, the prince of the Emishi tribe, a reclusive people in northern Honshū, is struck by a curse.</p>    
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-8" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/le_voyage_de.webp" alt="Spirited Away (2001)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">Spirited Away (2001)</h3>
+                                <p class="carrousel-card__description">The film tells the story of Chihiro, a ten-year-old girl who, on her way with her family to her new home, enters the spirit world.</p>    
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-9" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/chateau_ambulant.webp" alt="Howl's Moving Castle(2004)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">Howl's Moving Castle(2004)</h3>
+                                <p class="carrousel-card__description">An eighteen-year-old girl, Sophie, who works in her late father's shop, meets a mysterious sorcerer named Hauru by chance during a chase.</p>    
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-10" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/ponyo.webp" alt="Ponyo (2008)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">Ponyo (2008)</h3>
+                                <p class="carrousel-card__description">Fujimoto, a sorcerer who has abandoned the human world to live at the bottom of the ocean, experiments with 'water of life', a liquid that strengthens marine life.</p>    
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-11" class="carrousel_ecran">
+                        <figure>
+                            <div class="carrousel-card__img">
+                                <img class="carrousel-card__img-retouch" src="/public/img/Film/le_vent_se_leve.webp" alt="The Wind Rises (2013)">
+                            </div>
+                            <div class="carrousel-card__caption">
+                                <h3 class="carrousel-card__title">The Wind Rises (2013)</h3>
+                                <p class="carrousel-card__description">One night, a young boy, Jirō Horikoshi, dreams that he is flying a prototype plane with bird wings; his dream ends in a nightmare when he is attacked by a huge bomber.</p>    
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+              </div>
         </section>
     </main>
-    <footer>
-        <h2>memories</h2>
-        <ul>
-            <li><a href="/en/glossary.html"></a>glossary</li>
-            <li><a href="/en/contactEN.html"></a>contact</li>
-            <li><a href="/en/about_us.html"></a>about us</li>
+<!-- Fin du contenu principal -->
+
+<!-- Pied de page -->  
+<footer class="footer">
+    <a class="footer__lien_title" href="/en/homepage.html">
+        <h1 class="footer__title">Memories</h1>
+    </a> 
+
+    <nav class="footer__menu">
+        <ul class="list-unstyled">
+            <li><a class="footer__menu-item" href="/en/glossary.html">glossary</a></li>
+            <li><a class="footer__menu-item" href="/en/contactEN.html">contact</a></li>
+            <li><a class="footer__menu-item" href="/en/about_us.html">about us</a></li>
         </ul>
+    </nav>
+
+    <div class="footer__description">
         <p>Angelo SIMOES C2</p>
-        <a href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
-        <p>Project carried out as part of an educational exercise in the MMI department of Montbéliard</a></p>
-        <img src="/public/img/MMI_logo.svg" alt="MMi Logo">
-    </footer>
+        <a class="footer__link" href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
+        <p>Project carried out as part of an educational exercise in the <a class="footer__link" href="http://mmimontbeliard.com/">MMI department of Montbéliard</a></p>
+    </div>
+    
+    <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
+</footer>
 </body>
 </html>

@@ -1,58 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book</title>
+    <meta name="description" content="Site du projet pédagogique 'Memories' réalisé par Angelo Simoes">
+    <title>One Piece, popculture icon - Memories</title>
+<!-- Déclaration de la feuille de style -->
+    <link rel="stylesheet" href="/src/style.css">
+<!-- Chargement de la librairie Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
 </head>
-<body>
-    <main>
+
+<body>   
+<!-- En-tête de la page -->
+    <header class="header container">
+        <div>
+            <a class="header__lien_logo" href="/en/homepage.html">
+                <h1 class="header__logo">Memories</h1>
+            </a>   
+        </div>
+    
+        <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+                    <span class="menu-btn__bar"></span>
+            </button>
+
+        <!-- Menu principal -->
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/movie.html">Spirited Away, Miyazaki's depiction of society</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/book.html">One Piece, popculture icon</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/music.html">Chang, when PNL reminds us of their past</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/place.html">Portugal, a journey through 800 years of history</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/hope.html">A glow of hope for the future of the Earth</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/fear.html">What future for our planet?</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/en/others_projects.html">Others Projects</a></li>
+                    <hr class="menu__separation-line">
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/glossary.html">Glossary</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="/en/contactEN.html">Contact</a></li>
+                    <li class="menu__item_secondary capitalize"><a class="menu__link" href="/en/about_us.html">about us</a></li>
+                </ul>
+            </nav>
+        <!-- Fin du menu principal -->
+        </div>    
+    </header>
+<!-- Fin de l'en-tête de page -->
+
+<!-- Contenu principal de la page -->
+    <main class="main container">
         <section>
-            <h1>One Piece, popculture icon</h1>
-            <p>After more than 25 years of publication how to explain that this work is still successful.</p>
-            <p>By Angelo Simoes</p>
+            <h1 class="article__title">One Piece, popculture icon</h1>
+            <p class="article__introduction">After more than 25 years of publication how to explain that this work is still successful.</p>
+            <p class="article__introduction-name">By Angelo Simoes</p>
             <div>
-                <img src="" alt="Image representing the main characters : Ace, Sabo and Luffy">
-                <p>Image representing the main characters : Ace, Sabo and Luffy</p>
+                <figure class="article__img">
+                    <img src="/public/img/Livre/ace_sabo_luffy.webp" alt="Image representing the main characters">
+                    <figcaption class="article__img-legend">Image representing the main characters</figcaption>
+                </figure>
             </div>
-            <h3>the topics covered</h3>
-           <p>Throughout the 20th century, Japan was the world leader in manga creation. In fact, Japan accounts for almost half of all volumes of manga published worldwide. During this period, Japanese manga gained international popularity through comics, novels and films. As a result, many Japanese now live abroad and work in creative industries related to manga. In particular, the manga focuses on themes relevant to society such as love, family, freedom and friendship. As an art form, manga has many qualities that make it unique in literature.</p>
+            <h2 class="article__subheadings">the topics covered</h2>
+            <p class="article__text">Throughout the 20th century, Japan was the world leader in manga creation. In fact, Japan accounts for almost half of all volumes of manga published worldwide. During this period, Japanese manga gained international popularity through comics, novels and films. As a result, many Japanese now live abroad and work in creative industries related to manga. In particular, the manga focuses on themes relevant to society such as love, family, freedom and friendship. As an art form, manga has many qualities that make it unique in literature.</p>
             <div>
-                <img src="" alt="The Strawhat crew">
-                <p>The Strawhat crew </p>
+                <figure class="article__img">
+                    <img src="/public/img/Livre/equipage_OnePiece.webp" alt="The straw hat crew">
+                    <figcaption class="article__img-legend">The straw hat crew</figcaption>
+                </figure>
             </div>
-            <h3>lifetime's work</h3>
-            <p>
-                The manga contains elements of several genres such as adventure, action, drama, horror and more. The plot is essential to create a memorable work of fiction. A intrigue strong of discoveries, of rebound staging a bunch of character is what is One Piece. 
+            <h2 class="article__subheadings">Lifetime's work</h2>
+            <p class="article__text">The manga contains elements of several genres such as adventure, action, drama, horror and more. The plot is essential to create a memorable work of fiction. A intrigue strong of discoveries, of rebound staging a bunch of character is what is One Piece. 
                 The main characteristic that animates the story of One Piece is the character of Luffy. The author Eiichiro Oda founds his story through his main character who is unifying to talk about themes that are important to him such as slavery, geopolitics or racism. It is precisely a great strength of the author to be able to talk about this kind of thing in a manga released to the child at the base. 
-                Another strength of the manga is its multitude of characters from a distant horizon and with each their story indeed each reader can identify with a character. What makes it with over 1000 characters appearing a complete universe is never seen in the history of Japanese comics. 
-            </p>
+                Another strength of the manga is its multitude of characters from a distant horizon and with each their story indeed each reader can identify with a character. What makes it with over 1000 characters appearing a complete universe is never seen in the history of Japanese comics. </p>
             <div>
-                <img src="" alt="Status of Luffy in the birthplace of Oda">
-                <p>Status of Luffy in the birthplace of Oda</p>
+                <figure class="article__img">
+                    <img src="/public/img/Livre/statut_luffy.webp" alt="Status of Luffy in the birthplace of Oda">
+                    <figcaption class="article__img-legend">Status of Luffy in the birthplace of Oda</figcaption>
+                </figure>
             </div>
-            <h3>Sales record</h3>
-            <p>
-                In 2022 the Shueisha, the publishing house of One Piece, announced that manga had exceeded the symbolic figure of 500 million copies sold worldwide. This makes it the best-selling Japanese comic book in the world.
-            </p>
-            <h3>Some pages of book</h3>
-            <img src="" alt="One Piece pages">
-            <img src="" alt="One Piece pages">
-            <img src="" alt="One Piece pages">
-        </section>
+            <h2 class="article__subheadings">Sales record</h2>
+            <p class="article__text">In 2022 the Shueisha, the publishing house of One Piece, announced that manga had exceeded the symbolic figure of 500 million copies sold worldwide. This makes it the best-selling Japanese comic book in the world.</p>
+            <div>
+                <h2 class="article__subheadings">Some pages of book</h2>
+                <img class="book__img" src="/public/img/Livre/planche_onepiece_1.webp" alt="One Piece pages">
+                <img class="book__img" src="/public/img/Livre/lanche_onepiece_2.webp" alt="One Piece pages">
+                <img class="book__img" src="/public/img/Livre/lanche_onepiece_3.webp" alt="One Piece pages">   
+                <img class="book__img" src="/public/img/Livre/planches-one-piece-4.webp" alt="One Piece pages"> 
+            </div>
+         </section>
     </main>
-    <footer>
-        <h2>memories</h2>
-        <ul>
-            <li><a href="/en/glossary.html"></a>glossary</li>
-            <li><a href="/en/contactEN.html"></a>contact</li>
-            <li><a href="/en/about_us.html"></a>about us</li>
+<!-- Fin du contenu principal -->
+
+<!-- Pied de page -->  
+<footer class="footer">
+    <a class="footer__lien_title" href="/en/homepage.html">
+        <h1 class="footer__title">Memories</h1>
+    </a> 
+
+    <nav class="footer__menu">
+        <ul class="list-unstyled">
+            <li><a class="footer__menu-item" href="/en/glossary.html">glossary</a></li>
+            <li><a class="footer__menu-item" href="/en/contactEN.html">contact</a></li>
+            <li><a class="footer__menu-item" href="/en/about_us.html">about us</a></li>
         </ul>
+    </nav>
+
+    <div class="footer__description">
         <p>Angelo SIMOES C2</p>
-        <a href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
-        <p>Project carried out as part of an educational exercise in the MMI department of Montbéliard</a></p>
-        <img src="/public/img/MMI_logo.svg" alt="MMi Logo">
-    </footer>
+        <a class="footer__link" href="mailto:angelosimoespro@gmail.com">angelosimoespro@gmail.com</a>
+        <p>Project carried out as part of an educational exercise in the <a class="footer__link" href="http://mmimontbeliard.com/">MMI department of Montbéliard</a></p>
+    </div>
+    
+    <img class="footer__logo" src="/public/img/mmi_logo.webp" alt="Logo MMi">
+</footer>
 </body>
 </html>

@@ -3,57 +3,57 @@
 [
     {
       "id": 1,
-      "title": "Le Voyage de Chihiro, la société dépeinte selon Miyazaki",
-      "excerpt": "A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.",
-      "link": "/fr/film.html",
+      "title": "Spirited Away, Miyazaki's depiction of society",
+      "excerpt": "Through this journey in the world of the spirits, the Japanese director takes a critical look at our current world.",
+      "link": "/en/movie.html",
       "picture": "/public/img/Film/presentation_voyage_chihiro.webp",
-      "picture_desc": "La scène du train dans le Voyage de Chihiro"
+      "picture_desc": "Chihiro and the famous train scene"
     },
     {
       "id": 2,
-      "title": "One Piece,  icône de la popculture",
-      "excerpt": "A travers cette balade dans le monde des esprits, le réalisateur japonais porte un regard critique sur notre monde actuel.",
-      "link": "/fr/livre.html",
+      "title": "One Piece, popculture icon",
+      "excerpt": "After more than 25 years of publication how to explain that this work is still successful.",
+      "link": "/en/book.html",
       "picture": "/public/img/Livre/ace_sabo_luffy.webp",
-      "picture_desc": "Le personnage principal de One Piece Luffy et ses frères"
+      "picture_desc": "Image representing the main characters"
     },
     {
       "id": 3,
-      "title": "Chang, quand PNL nous ressasse leur passé",
-      "excerpt": "Partagé entre regret et bon moment, PNL nous transporte dans leur enfance tout ça sur un brin de mélancolie.",
-      "link": "/fr/musique.html",
+      "title": "Chang, when PNL reminds us of their past",
+      "excerpt": "Divided between regret and good times, PNL takes us back to their childhood with a touch of melancholy.",
+      "link": "/en/music.html",
       "picture": "/public/img/Musique/PNL_tour_eiffel.webp",
-      "picture_desc": "Le groupe PNL au sommet de la Tour Eiffel"
+      "picture_desc": "The group contemplating Paris from the Eiffel Tower"
     },
     {
       "id": 4,
-      "title": "Portugal, voyage à travers 800 ans d’histoire",
-      "excerpt": "Le Portugal petit pays mais terre rempli d’histoire, voyageons à travers plus de 800 ans d’existence composé de haut et de bas.",
-      "link": "/fr/lieu.html",
+      "title": "Portugal, a journey through 800 years of history",
+      "excerpt": "Portugal is a small country but a land full of history, let's travel through more than 800 years of existence composed of highs and lows.",
+      "link": "/en/place.html",
       "picture": "/public/img/Lieu/lisbonne.webp",
-      "picture_desc": "La ville de Lisbonne"
+      "picture_desc": "The city of Lisbon"
     },
     {
       "id": 5,
-      "title": "Une lueur d’espoir pour l’avenir de la Terre",
-      "excerpt": "“Fridays For Future”, “Youth for Climate” vous avez déjà sûrement entendu leur nom mais qui sont-ils et pourquoi font-ils autant de bruit ?",
-      "link": "/fr/espoir.html",
+      "title": "A glow of hope for the future of the Earth",
+      "excerpt": "“Fridays For Future”, “Youth for Climate”, you have probably heard their names, but who are they and why are they making so much noise?",
+      "link": "/en/hope.html",
       "picture": "/public/img/Espoir/fridays_for_future.webp",
-      "picture_desc": "Manifestation pour l'environnement"
+      "picture_desc": "Fridays for Future protester"
     },
     {
       "id": 6,
-      "title": "Quel avenir pour notre planète ?",
-      "excerpt": "Pendant combien de temps encore notre planète va pouvoir endurer notre mode de vie actuel.",
-      "link": "/fr/crainte.html",
+      "title": "What future for our planet?",
+      "excerpt": "How much longer our planet will be able to endure our current way of life.",
+      "link": "/en/fear.html",
       "picture": "/public/img/Crainte/presentation_desespoir.webp",
-      "picture_desc": "Déchets plastiques"
+      "picture_desc": "The 6th plastic continent"
     },
     {
       "id": 7,
-      "title": "Autres Projets",
-      "excerpt": "Retrouver dans cette sections tous les projets du groupe de tp c2 du département mmi de montbéliard.",
-      "link": "/fr/autres-projets.html.html",
+      "title": "Others Projects",
+      "excerpt": "Find in this section all the projects of the TP C2 group of the MMI department of Montbéliard.",
+      "link": "/en/others-projects.html",
       "picture": "/public/img/projets/presentation_mmi.webp",
       "picture_desc": "MMi Montbéliard"
     }

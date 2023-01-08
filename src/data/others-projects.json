@@ -1,0 +1,69 @@
+
+
+[
+    {
+      "id": 1,
+      "title": "Trav-All",
+      "name": "Enes Tavukcu",
+      "link": "http://travall.enestavukcu.fr/",
+      "picture": "/public/img/projets/Projet_Enes.webp",
+      "picture_desc": "The train scene in The Voyage of Chihiro"
+    },
+    {
+      "id": 2,
+      "title": "Génocide cachée",
+      "name": "Oliventhan Thamilselvan",
+      "link": "http://genocide-cache.thamilselvan.fr/",
+      "picture": "/public/img/projets/projet_oli.webp",
+      "picture_desc": "Sri Lankan child"
+    },
+    {
+        "id": 3,
+        "title": "Reboot",
+        "name": "Atnan Tas",
+        "link": "https://reboot.atnantas.fr/",
+        "picture": "/public/img/projets/Projet_Atnan.webp",
+        "picture_desc": "Excerpt from Jojo's Bizarre Adeventure"
+      },
+      {
+        "id": 4,
+        "title": "Past Life",
+        "name": "Kubilay Yardimli",
+        "link": "https://pastlife.kubilayyardimli.fr/",
+        "picture": "/public/img/projets/kubilay_projet.webp",
+        "picture_desc": "Saint Sophia Mosque"
+      },
+      {
+        "id": 5,
+        "title": "What is was to be 18 ?",
+        "name": "Romane Miguel",
+        "link": "https://www.wiwtb18.romane-miguel.fr/",
+        "picture": "/public/img/projets/romane-projet.webp",
+        "picture_desc": "Cinque terres in Italie"
+      },
+      {
+        "id": 6,
+        "title": "Denonciation of the current world",
+        "name": "Sofiane Mouadeb",
+        "link": "https://denunciationofthecurrentworld.mouadeb.fr/",
+        "picture": "/public/img/projets/sofiane-projet.webp",
+        "picture_desc": "Slum in South Africa"
+      },
+      {
+        "id": 7,
+        "title": "Advanced Technology",
+        "name": "Maxime Ruchet",
+        "link": "https://advancing-technologie.maximeruchet.fr/fr/",
+        "picture": "/public/img/projets/maxime-projet.webp",
+        "picture_desc": "The city of Vancouver in Canada"
+      },
+      {
+        "id": 8,
+        "title": "Society Mind",
+        "name": "Emma Wettle",
+        "link": "https://societymind.emmawettle.fr/fran%C3%A7ais/accueil.html",
+        "picture": "/public/img/projets/projet-emma.webp",
+        "picture_desc": "Emma's site"
+      }
+  
+  ]
