@@ -40,10 +40,6 @@ h2 {
   font-size: var(--title-xl);
 }
 
-h3 {
-  line-height: 1.4;
-}
-
 /* permet d'annuler la mise en forme des bouton qu'applique le navigateur. */
 button {
   -webkit-appearance: none;
