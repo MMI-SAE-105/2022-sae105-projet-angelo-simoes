@@ -31,7 +31,7 @@ Flex sert à positionner les éléments de l'en-tête (header__start et header__
   font-family: var(--font-logo);
   font-size: var(--project--name-32-px);
   font-weight: 500;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .header__logo-lang{
